@@ -1,8 +1,10 @@
 extends Area2D
 
-export var speedDefault = 240
-export var speedLeftRight = 280
+export var speedDefault = 260
+export var speedLeftRight = 340
 var speedCurrent = speedDefault
+
+const laserMissle = preload("res://PlayerLaserMissle.tscn")
 
 func _ready():
 	pass # Replace with function body.
@@ -18,4 +20,13 @@ func _process(delta):
 		self.position.x += speedLeftRight * delta
 	
 func _input(event):
-	pass
+	
+	if event.is_action_pressed("FIRE") && event.echo == false:
+		createLaser(self.position)
+
+func createLaser(pos):
+	var spawnPos = Vector2(pos.x,pos.y + 20)
+	var laser = laserMissle.instance()
+	laser.set_position(spawnPos)
+	get_tree().get_root().add_child(laser)
+	#add_child(laser)
