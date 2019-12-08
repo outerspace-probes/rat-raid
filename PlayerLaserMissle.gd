@@ -1,6 +1,7 @@
 extends Area2D
 
-export var missleSpeed = 900
+export var missleSpeed = 1200
+
 var playerNode
 
 func _ready():

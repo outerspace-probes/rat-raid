@@ -12,3 +12,4 @@ polygon = PoolVector2Array( 29.6409, 15.1957, -31.9395, 15.1957, -48.3055, 5.487
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( 23.5828, 11.2154, -17.1873, 11.3652, -26.3306, 5.21975, -24.5319, -3.17409, -18.2365, -5.72222, -13.2901, -1.07563, -9.24312, -12.0176, -1.29895, -15.1653, 13.6901, -15.7648, 17.4373, -3.17409, 13.9898, 3.42107, 19.236, 6.41887 )
+[connection signal="body_entered" from="." to="." method="_on_Enemy1_body_entered"]

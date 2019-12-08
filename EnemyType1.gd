@@ -1,6 +1,6 @@
 extends Area2D
 
-export var moveSpeed = 90
+var moveSpeed = 160
 var direction = "left"
 
 func _ready():
@@ -9,7 +9,27 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	# move
+	move(delta)
+	
+func _on_EnemyType1_area_entered(area):
+	
+	if area.name == "PlayerLaserMissle":
+		processDie()
+	elif area.name == "PlayerRat":
+		processDie()
+	
+# collision with tilemap
+func _on_Enemy1_body_entered(body):
+	changeDirection()
+	
+func changeDirection():
+	if direction == "left":
+		direction = "right"
+	else:
+		direction = "left"	
+
+func move(delta):
+		# move
 	var moveAmt
 	
 	if direction == "left":
@@ -19,3 +39,5 @@ func _process(delta):
 	
 	self.position.x += moveAmt
 	
+func processDie():
+	queue_free()

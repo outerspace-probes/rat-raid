@@ -1,9 +1,9 @@
 extends Area2D
 
-export var speedDefault = 260
-export var speedLeftRight = 340
-var speedCurrent = speedDefault
+export var speedDefault = 280
+export var speedLeftRight = 380
 
+var speedCurrent = speedDefault
 const laserMissle = preload("res://PlayerLaserMissle.tscn")
 
 func _ready():
