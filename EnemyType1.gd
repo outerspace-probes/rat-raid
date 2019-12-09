@@ -12,9 +12,7 @@ func _process(delta):
 	move(delta)
 	
 func _on_EnemyOne_area_entered(area):
-	
-	print("enemy area entered")
-	
+		
 	if area.is_in_group("playermissles"):
 		processDie()
 	elif area.name == "PlayerRat":
