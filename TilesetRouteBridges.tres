@@ -3,19 +3,19 @@
 [ext_resource path="res://RatRaidTileset.png" type="Texture" id=1]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 9.84875, 60.7646, 13.7068, 16.8796, 64, 15.9151, 64, 64, 11.2955, 64 )
+points = PoolVector2Array( 28.5602, 35.9768, 33.1898, 24.9814, 63.8611, 17.8441, 64, 64, 29.1389, 64 )
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 64, 0, 64, 64, 10.331, 64, 10.8132, 0 )
+points = PoolVector2Array( 64, 0, 64, 64, 30.875, 64, 30.2963, 0.911987 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 64, 0, 64, 54.7747, 11.7778, 50.9166, 9.84875, 0 )
+points = PoolVector2Array( 64, 0, 64, 54.7747, 30.2963, 50.3379, 30.875, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 16.8796, 64, 16.8796, 64, 64, 0, 64 )
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
-points = PoolVector2Array( 0, 17.8441, 55.4598, 22.1844, 54.4954, 64, 0, 64 )
+points = PoolVector2Array( 0, 17.8441, 30.7685, 25.5602, 33.662, 63.1759, 0, 64 )
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 0 )
@@ -24,10 +24,10 @@ points = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 0 )
 points = PoolVector2Array( 63.5185, 0, 64, 53.8102, 0, 54.7747, 0, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
-points = PoolVector2Array( 54.4954, 0, 54.9776, 64, 0, 64, 0, 0 )
+points = PoolVector2Array( 33.662, 0, 32.5046, 64, 0, 64, 0, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
-points = PoolVector2Array( 55.4598, 0, 55.9421, 49.4698, 0, 54.2924, 0, 0 )
+points = PoolVector2Array( 32.5046, 0, 31.3472, 51.4953, 0, 54.2924, 0, 0 )
 
 [resource]
 0/name = "Bridge"

@@ -1,10 +1,10 @@
 extends Area2D
 
-var moveSpeed = 160
+var moveSpeed = 220
 var direction = "left"
 
 func _ready():
-	pass # Replace with function body.
+	add_to_group("enemies")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -13,7 +13,7 @@ func _process(delta):
 	
 func _on_EnemyType1_area_entered(area):
 	
-	if area.name == "PlayerLaserMissle":
+	if area.is_in_group("playermissles"):
 		processDie()
 	elif area.name == "PlayerRat":
 		processDie()

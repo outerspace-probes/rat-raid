@@ -38,14 +38,21 @@ format = 1
 tile_data = PoolIntArray( -19988425, 5, 65537, -19595256, 5, 65537, -19595255, 5, 65537, -19595254, 5, 65537, -19267560, 5, 65537, -19005383, 5, 65537, -18481146, 5, 65537, -17432514, 4, 0, -17039304, 4, 0, -16973764, 4, 0, -16580550, 4, 0, -16515040, 5, 65537, -16318402, 4, 0, -15925242, 5, 65537, -15859690, 5, 65537, -15597513, 5, 65537, -15138789, 0, 0, -14811109, 0, 0, -13893570, 0, 0, -13828057, 5, 65537, -13434820, 0, 0, -12976067, 0, 0, -12517317, 5, 65537, -11730923, 5, 65537, -11534276, 5, 65537, -10944475, 5, 65537, -8978371, 1, 0, -8519629, 5, 65537, -8388545, 1, 0, -8323063, 5, 65537, -8257497, 5, 65537, -8191999, 1, 0, -7798781, 1, 0, -7602160, 5, 65537, -7471099, 1, 0, -7405566, 1, 0, -7012350, 1, 0, -6881231, 5, 65537, -6750197, 5, 65537, -5111776, 5, 65537, -4259799, 5, 65537, -3997683, 5, 65537, -3604479, 5, 65537, -2949099, 5, 65537, -2490369, 0, 0, -2555902, 0, 0, -2555900, 0, 0, -2228227, 0, 0, -2293760, 0, 0, -2293758, 0, 0, -2293755, 4, 0, -2293712, 3, 0, -2293702, 0, 0, -2228165, 0, 0, -1966082, 0, 0, -2031616, 0, 0, -2031613, 4, 0, -2031567, 4, 1, -1966030, 4, 1, -1966028, 4, 65537, -1966022, 0, 0, -1835009, 0, 0, -1835000, 5, 0, -1703936, 0, 0, -1703880, 0, 0, -1703878, 0, 0, -1572865, 4, 0, -1572810, 0, 0, -1507326, 0, 0, -1507271, 0, 0, -1376258, 0, 0, -1441737, 0, 0, -1441735, 0, 0, -1245185, 0, 0, -1310673, 5, 0, -1179625, 5, 0, -1179597, 4, 0, -1048566, 5, 1, -1048517, 4, 65536, -917505, 4, 0, -983032, 5, 65537, -917498, 5, 1, -786379, 4, 0, -720838, 4, 0, -327623, 4, 0, -131039, 5, 65537, 32, 5, 1, 57, 4, 0, 196632, 0, 0, 262158, 5, 1, 262170, 0, 0, 327705, 0, 0, 327707, 0, 0, 393225, 5, 65537, 720950, 5, 0, 851966, 1, 0, 786456, 5, 65537, 917505, 2, 0, 917561, 4, 65537, 1048572, 1, 0, 983097, 4, 0, 1048631, 4, 0, 1048635, 4, 65537, 1114169, 4, 1, 1114171, 4, 65537, 1245181, 2, 0, 1245241, 4, 0, 1310721, 2, 0, 1310758, 5, 65537, 1310774, 4, 0, 1310776, 4, 65537, 1376314, 4, 65537, 1441837, 4, 0, 1441847, 4, 65537, 1507338, 3, 0, 1572920, 4, 0, 1703934, 2, 0, 1638440, 4, 0, 1638446, 0, 0, 1703980, 0, 0, 1703994, 4, 65537, 1769491, 5, 65537, 1769518, 0, 0, 1835008, 2, 0, 1966076, 2, 0, 1966099, 5, 65537 )
 
 [node name="Enemies" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Type1" type="Node" parent="Enemies"]
 
 [node name="EnemyOne" parent="Enemies/Type1" instance=ExtResource( 5 )]
-position = Vector2( 644.642, 397.399 )
+position = Vector2( 227.356, -72.6234 )
+
+[node name="EnemyOne9" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1374.74, -83.6671 )
 
 [node name="EnemyOne2" parent="Enemies/Type1" instance=ExtResource( 5 )]
 position = Vector2( 1488.13, 188.961 )
+
+[node name="EnemyOne39" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 678.896, 543.229 )
 
 [node name="EnemyOne3" parent="Enemies/Type1" instance=ExtResource( 5 )]
 position = Vector2( 782.951, -27.2684 )
@@ -56,6 +63,9 @@ position = Vector2( 165.43, -190.902 )
 [node name="EnemyOne5" parent="Enemies/Type1" instance=ExtResource( 5 )]
 position = Vector2( 1379.04, -329.211 )
 
+[node name="EnemyOne10" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 640.339, -769.353 )
+
 [node name="EnemyOne6" parent="Enemies/Type1" instance=ExtResource( 5 )]
 position = Vector2( 904.652, -878.551 )
 
@@ -64,6 +74,90 @@ position = Vector2( 1403.27, -981.796 )
 
 [node name="EnemyOne8" parent="Enemies/Type1" instance=ExtResource( 5 )]
 position = Vector2( 616.117, -1122.05 )
+
+[node name="EnemyOne11" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 376.451, -1631.53 )
+
+[node name="EnemyOne12" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1760.19, -1437.09 )
+
+[node name="EnemyOne13" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1488.13, -1859.14 )
+
+[node name="EnemyOne14" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1760.19, -1957.12 )
+
+[node name="EnemyOne15" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1187.4, -1753.63 )
+
+[node name="EnemyOne16" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 587.592, -2015.9 )
+
+[node name="EnemyOne17" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 626.149, -2267.63 )
+
+[node name="EnemyOne18" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1225.95, -2425.9 )
+
+[node name="EnemyOne21" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1833.44, -3039.17 )
+
+[node name="EnemyOne19" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 928.874, -2849.46 )
+
+[node name="EnemyOne22" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1094.68, -3361.96 )
+
+[node name="EnemyOne23" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1679.53, -3845.81 )
+
+[node name="EnemyOne24" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1283.21, -4436.69 )
+
+[node name="EnemyOne25" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 900.349, -4549.74 )
+
+[node name="EnemyOne26" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 203.987, -4670.32 )
+
+[node name="EnemyOne27" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 482.845, -4796.94 )
+
+[node name="EnemyOne28" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1379.04, -4980.84 )
+
+[node name="EnemyOne29" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 482.845, -5420.98 )
+
+[node name="EnemyOne30" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1053.38, -5904.83 )
+
+[node name="EnemyOne31" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 640.339, -6161.08 )
+
+[node name="EnemyOne32" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 268.66, -6257.55 )
+
+[node name="EnemyOne33" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1679.53, -6372.11 )
+
+[node name="EnemyOne34" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1679.53, -6372.11 )
+
+[node name="EnemyOne35" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1184.65, -6414.31 )
+
+[node name="EnemyOne36" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 559.068, -7017.25 )
+
+[node name="EnemyOne37" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 268.66, -7288.57 )
+
+[node name="EnemyOne38" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1379.04, -7312.47 )
+
+[node name="EnemyOne20" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 268.66, -2920.31 )
 
 [node name="Fuel" type="Node" parent="."]
 
@@ -86,17 +180,82 @@ position = Vector2( -866.021, -1006.89 )
 polygon = PoolVector2Array( 856.487, 1038.02, 846.449, 1021.17, 845.374, 1008.26, 856.128, 989.621, 846.449, 978.15, 864.732, 969.905, 886.958, 978.508, 875.845, 989.621, 884.09, 1009.7, 885.524, 1018.66, 875.128, 1038.02, 867.241, 1044.47 )
 [connection signal="area_entered" from="Enemies/Type1/EnemyOne" to="Enemies/Type1/EnemyOne" method="_on_EnemyType1_area_entered"]
 [connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne" to="Enemies/Type1/EnemyOne" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne9" to="Enemies/Type1/EnemyOne9" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne9" to="Enemies/Type1/EnemyOne9" method="_on_EnemyType1_area_shape_entered"]
 [connection signal="area_entered" from="Enemies/Type1/EnemyOne2" to="Enemies/Type1/EnemyOne2" method="_on_EnemyType1_area_entered"]
 [connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne2" to="Enemies/Type1/EnemyOne2" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne39" to="Enemies/Type1/EnemyOne39" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne39" to="Enemies/Type1/EnemyOne39" method="_on_EnemyType1_area_shape_entered"]
 [connection signal="area_entered" from="Enemies/Type1/EnemyOne3" to="Enemies/Type1/EnemyOne3" method="_on_EnemyType1_area_entered"]
 [connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne3" to="Enemies/Type1/EnemyOne3" method="_on_EnemyType1_area_shape_entered"]
 [connection signal="area_entered" from="Enemies/Type1/EnemyOne4" to="Enemies/Type1/EnemyOne4" method="_on_EnemyType1_area_entered"]
 [connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne4" to="Enemies/Type1/EnemyOne4" method="_on_EnemyType1_area_shape_entered"]
 [connection signal="area_entered" from="Enemies/Type1/EnemyOne5" to="Enemies/Type1/EnemyOne5" method="_on_EnemyType1_area_entered"]
 [connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne5" to="Enemies/Type1/EnemyOne5" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne10" to="Enemies/Type1/EnemyOne10" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne10" to="Enemies/Type1/EnemyOne10" method="_on_EnemyType1_area_shape_entered"]
 [connection signal="area_entered" from="Enemies/Type1/EnemyOne6" to="Enemies/Type1/EnemyOne6" method="_on_EnemyType1_area_entered"]
 [connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne6" to="Enemies/Type1/EnemyOne6" method="_on_EnemyType1_area_shape_entered"]
 [connection signal="area_entered" from="Enemies/Type1/EnemyOne7" to="Enemies/Type1/EnemyOne7" method="_on_EnemyType1_area_entered"]
 [connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne7" to="Enemies/Type1/EnemyOne7" method="_on_EnemyType1_area_shape_entered"]
 [connection signal="area_entered" from="Enemies/Type1/EnemyOne8" to="Enemies/Type1/EnemyOne8" method="_on_EnemyType1_area_entered"]
 [connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne8" to="Enemies/Type1/EnemyOne8" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne11" to="Enemies/Type1/EnemyOne11" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne11" to="Enemies/Type1/EnemyOne11" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne12" to="Enemies/Type1/EnemyOne12" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne12" to="Enemies/Type1/EnemyOne12" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne13" to="Enemies/Type1/EnemyOne13" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne13" to="Enemies/Type1/EnemyOne13" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne14" to="Enemies/Type1/EnemyOne14" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne14" to="Enemies/Type1/EnemyOne14" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne15" to="Enemies/Type1/EnemyOne15" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne15" to="Enemies/Type1/EnemyOne15" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne16" to="Enemies/Type1/EnemyOne16" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne16" to="Enemies/Type1/EnemyOne16" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne17" to="Enemies/Type1/EnemyOne17" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne17" to="Enemies/Type1/EnemyOne17" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne18" to="Enemies/Type1/EnemyOne18" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne18" to="Enemies/Type1/EnemyOne18" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne21" to="Enemies/Type1/EnemyOne21" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne21" to="Enemies/Type1/EnemyOne21" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne19" to="Enemies/Type1/EnemyOne19" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne19" to="Enemies/Type1/EnemyOne19" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne22" to="Enemies/Type1/EnemyOne22" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne22" to="Enemies/Type1/EnemyOne22" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne23" to="Enemies/Type1/EnemyOne23" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne23" to="Enemies/Type1/EnemyOne23" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne24" to="Enemies/Type1/EnemyOne24" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne24" to="Enemies/Type1/EnemyOne24" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne25" to="Enemies/Type1/EnemyOne25" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne25" to="Enemies/Type1/EnemyOne25" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne26" to="Enemies/Type1/EnemyOne26" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne26" to="Enemies/Type1/EnemyOne26" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne27" to="Enemies/Type1/EnemyOne27" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne27" to="Enemies/Type1/EnemyOne27" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne28" to="Enemies/Type1/EnemyOne28" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne28" to="Enemies/Type1/EnemyOne28" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne29" to="Enemies/Type1/EnemyOne29" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne29" to="Enemies/Type1/EnemyOne29" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne30" to="Enemies/Type1/EnemyOne30" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne30" to="Enemies/Type1/EnemyOne30" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne31" to="Enemies/Type1/EnemyOne31" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne31" to="Enemies/Type1/EnemyOne31" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne32" to="Enemies/Type1/EnemyOne32" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne32" to="Enemies/Type1/EnemyOne32" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne33" to="Enemies/Type1/EnemyOne33" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne33" to="Enemies/Type1/EnemyOne33" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne34" to="Enemies/Type1/EnemyOne34" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne34" to="Enemies/Type1/EnemyOne34" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne35" to="Enemies/Type1/EnemyOne35" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne35" to="Enemies/Type1/EnemyOne35" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne36" to="Enemies/Type1/EnemyOne36" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne36" to="Enemies/Type1/EnemyOne36" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne37" to="Enemies/Type1/EnemyOne37" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne37" to="Enemies/Type1/EnemyOne37" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne38" to="Enemies/Type1/EnemyOne38" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne38" to="Enemies/Type1/EnemyOne38" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="Enemies/Type1/EnemyOne20" to="Enemies/Type1/EnemyOne20" method="_on_EnemyType1_area_entered"]
+[connection signal="area_shape_entered" from="Enemies/Type1/EnemyOne20" to="Enemies/Type1/EnemyOne20" method="_on_EnemyType1_area_shape_entered"]
+[connection signal="area_entered" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_area_entered"]
+[connection signal="body_entered" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_body_entered"]
+[connection signal="body_exited" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_body_exited"]
