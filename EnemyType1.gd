@@ -11,7 +11,9 @@ func _process(delta):
 	
 	move(delta)
 	
-func _on_EnemyType1_area_entered(area):
+func _on_EnemyOne_area_entered(area):
+	
+	print("enemy area entered")
 	
 	if area.is_in_group("playermissles"):
 		processDie()
@@ -19,7 +21,7 @@ func _on_EnemyType1_area_entered(area):
 		processDie()
 	
 # collision with tilemap
-func _on_Enemy1_body_entered(body):
+func _on_EnemyOne_body_entered(body):
 	if body.name == "RouteTileMap":
 		changeDirection()
 	
@@ -42,7 +44,3 @@ func move(delta):
 	
 func processDie():
 	queue_free()
-
-
-func _on_Enemy1_area_entered(area):
-	pass # Replace with function body.

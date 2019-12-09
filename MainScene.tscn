@@ -41,32 +41,62 @@ tile_data = PoolIntArray( -19988425, 5, 65537, -19595256, 5, 65537, -19595255, 5
 
 [node name="Type1" type="Node" parent="Enemies"]
 
-[node name="Enemy1" parent="Enemies/Type1" instance=ExtResource( 5 )]
-position = Vector2( 1044.56, 609.612 )
+[node name="EnemyOne" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 974.659, 639.121 )
 
-[node name="Enemy2" parent="Enemies/Type1" instance=ExtResource( 5 )]
-position = Vector2( 617.832, 401.976 )
+[node name="EnemyOne2" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 607.611, 417.661 )
 
-[node name="Enemy3" parent="Enemies/Type1" instance=ExtResource( 5 )]
-position = Vector2( 1472.72, 172.86 )
+[node name="EnemyOne3" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1116.15, 376.651 )
 
-[node name="Enemy4" parent="Enemies/Type1" instance=ExtResource( 5 )]
-position = Vector2( 785.373, -50.5275 )
+[node name="EnemyOne4" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1499.6, 155.191 )
 
-[node name="Enemy5" parent="Enemies/Type1" instance=ExtResource( 5 )]
-position = Vector2( 1044.56, -309.715 )
+[node name="EnemyOne5" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1148.96, -293.878 )
 
-[node name="Enemy6" parent="Enemies/Type1" instance=ExtResource( 5 )]
-position = Vector2( 1379.64, -875.344 )
+[node name="EnemyOne6" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 228.26, -97.0258 )
 
-[node name="Enemy7" parent="Enemies/Type1" instance=ExtResource( 5 )]
-position = Vector2( 626.424, -1070.09 )
+[node name="EnemyOne7" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1372.46, -958.256 )
 
-[node name="Enemy8" parent="Enemies/Type1" instance=ExtResource( 5 )]
-position = Vector2( 1156.25, -1806.13 )
+[node name="EnemyOne8" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 611.712, -1048.48 )
 
-[node name="Enemy9" parent="Enemies/Type1" instance=ExtResource( 5 )]
-position = Vector2( 1392.53, -1405.17 )
+[node name="EnemyOne9" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1112.05, -1768.22 )
+
+[node name="EnemyOne10" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1731.31, -2403.07 )
+
+[node name="EnemyOne11" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 318.996, -2913.45 )
+
+[node name="EnemyOne12" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 981.323, -3351.76 )
+
+[node name="EnemyOne13" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1630.01, -3799.8 )
+
+[node name="EnemyOne14" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1208.07, -4454.92 )
+
+[node name="EnemyOne15" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 364.19, -4791.73 )
+
+[node name="EnemyOne16" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 330.879, -5498.67 )
+
+[node name="EnemyOne17" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 987.849, -5496.82 )
+
+[node name="EnemyOne18" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 987.849, -5496.82 )
+
+[node name="EnemyOne19" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1652.48, -5808.99 )
 
 [node name="Fuel" type="Node" parent="."]
 
