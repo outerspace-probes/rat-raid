@@ -20,7 +20,8 @@ func _on_EnemyType1_area_entered(area):
 	
 # collision with tilemap
 func _on_Enemy1_body_entered(body):
-	changeDirection()
+	if body.name == "RouteTileMap":
+		changeDirection()
 	
 func changeDirection():
 	if direction == "left":
@@ -41,3 +42,7 @@ func move(delta):
 	
 func processDie():
 	queue_free()
+
+
+func _on_Enemy1_area_entered(area):
+	pass # Replace with function body.
