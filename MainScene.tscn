@@ -44,6 +44,30 @@ tile_data = PoolIntArray( -19988425, 5, 65537, -19595256, 5, 65537, -19595255, 5
 [node name="Enemy1" parent="Enemies/Type1" instance=ExtResource( 5 )]
 position = Vector2( 1044.56, 609.612 )
 
+[node name="Enemy2" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 617.832, 401.976 )
+
+[node name="Enemy3" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1472.72, 172.86 )
+
+[node name="Enemy4" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 785.373, -50.5275 )
+
+[node name="Enemy5" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1044.56, -309.715 )
+
+[node name="Enemy6" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1379.64, -875.344 )
+
+[node name="Enemy7" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 626.424, -1070.09 )
+
+[node name="Enemy8" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1156.25, -1806.13 )
+
+[node name="Enemy9" parent="Enemies/Type1" instance=ExtResource( 5 )]
+position = Vector2( 1392.53, -1405.17 )
+
 [node name="Fuel" type="Node" parent="."]
 
 [node name="Gates" type="Node" parent="."]
