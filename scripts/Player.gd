@@ -3,7 +3,7 @@ extends Area2D
 export var speedDefault = 360
 export var speedMin = 220
 export var speedMax = 620
-export var accelerationBrake = 1000
+export var accelerationBrake = 800
 export var speedLeftRight = 380
 
 export var speedCurrent = 0
