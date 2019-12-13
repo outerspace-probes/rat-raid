@@ -1,12 +1,13 @@
 extends Area2D
 
 export var speedDefault = 360
-export var speedMin = 160
-export var speedMax = 460
-export var speedAccelerationBrake = 360
+export var speedMin = 220
+export var speedMax = 620
+export var accelerationBrake = 1000
 export var speedLeftRight = 380
 
-var speedCurrent = speedDefault
+export var speedCurrent = 0
+
 const laserMissle = preload("res://prefabs/PlayerLaserMissle.tscn")
 var bridgeNode 
 var routeNode
@@ -16,6 +17,7 @@ onready var AnimPlayer = get_node("RatAnimationPlayer")
 
 func _ready():
 	initPos = self.position
+	speedCurrent = speedDefault
 	bridgeNode = get_tree().get_root().find_node("RouteBridgesTileMap", true, false)
 	routeNode = get_tree().get_root().find_node("RouteTileMap", true, false)
 	AnimPlayer.play("RatRunStraight")
@@ -49,7 +51,27 @@ func move(delta):
 		self.position.x -= speedLeftRight * delta
 	if Input.is_action_pressed("MOVE_RIGHT"):
 		self.position.x += speedLeftRight * delta	
+		
+	# acceleration & break
+	if Input.is_action_pressed("ACCELERATE"):
+		if speedCurrent <= speedMax:
+			speedCurrent += accelerationBrake * delta
+			setAnimSpeedScale()
+	elif Input.is_action_pressed("BREAK"):
+		if speedCurrent >= speedMin:
+			speedCurrent -= accelerationBrake * delta
+			setAnimSpeedScale()
+	else:
+		if speedCurrent > speedDefault:
+			speedCurrent -= accelerationBrake * delta
+			setAnimSpeedScale()
+		elif speedCurrent < speedDefault:
+			speedCurrent += accelerationBrake * delta
+			setAnimSpeedScale()	
 
+func setAnimSpeedScale():
+	AnimPlayer.set_speed_scale(speedCurrent / speedDefault)
+		
 func createLaser(pos):
 	
 	var spawnPos = Vector2(pos.x,pos.y + 20)
