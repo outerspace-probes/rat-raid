@@ -2,7 +2,6 @@
 
 [ext_resource path="res://images/RatRaidTileset.png" type="Texture" id=1]
 
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 28.5602, 35.9768, 33.1898, 24.9814, 63.8611, 17.8441, 64, 64, 29.1389, 64 )
 
@@ -22,7 +21,7 @@ points = PoolVector2Array( 0, 17.8441, 30.7685, 25.5602, 33.662, 63.1759, 0, 64 
 points = PoolVector2Array( 64, 0, 64, 64, 0, 64, 0, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
-points = PoolVector2Array( 63.5185, 0, 64, 53.8102, 0, 54.7747, 0, 0 )
+points = PoolVector2Array( 64, 0, 64, 53.8102, 0, 54.7747, 0, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 33.662, 0, 32.5046, 64, 0, 64, 0, 0 )

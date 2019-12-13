@@ -163,6 +163,7 @@ script = ExtResource( 6 )
 [node name="Sprite" type="Sprite" parent="PlayerRat"]
 texture = ExtResource( 7 )
 hframes = 7
+frame = 1
 
 [node name="RatAnimationPlayer" type="AnimationPlayer" parent="PlayerRat"]
 anims/RatRunLeft = SubResource( 2 )

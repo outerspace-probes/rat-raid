@@ -25,8 +25,9 @@ func _ready():
 func _process(delta):
 	
 	move(delta)
-			
+				
 func _input(event):
+	
 	# fire
 	if event.is_action_pressed("FIRE") && event.is_echo() == false:
 		createLaser(self.position)
@@ -43,6 +44,7 @@ func _input(event):
 		AnimPlayer.set_current_animation("RatRunStraight")
 
 func move(delta):
+	
 	# moving up
 	self.position.y -= speedCurrent * delta
 	
