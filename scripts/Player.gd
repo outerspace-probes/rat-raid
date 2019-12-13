@@ -4,7 +4,7 @@ export var speedDefault = 360
 export var speedLeftRight = 380
 
 var speedCurrent = speedDefault
-const laserMissle = preload("res://PlayerLaserMissle.tscn")
+const laserMissle = preload("res://prefabs/PlayerLaserMissle.tscn")
 var bridgeNode 
 var routeNode
 var initPos

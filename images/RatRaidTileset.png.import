@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RatRaidTileset.png-b433b20550aedaf805231100b9d99251.stex"
+path="res://.import/RatRaidTileset.png-157d8a3b3794267823e2c96220879c1c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://RatRaidTileset.png"
-dest_files=[ "res://.import/RatRaidTileset.png-b433b20550aedaf805231100b9d99251.stex" ]
+source_file="res://images/RatRaidTileset.png"
+dest_files=[ "res://.import/RatRaidTileset.png-157d8a3b3794267823e2c96220879c1c.stex" ]
 
 [params]
 

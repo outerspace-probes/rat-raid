@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://MainCamera2D.gd" type="Script" id=1]
-[ext_resource path="res://TilesetRoute.tres" type="TileSet" id=2]
-[ext_resource path="res://TilesetRouteBridges.tres" type="TileSet" id=3]
-[ext_resource path="res://TilesetDecos.tres" type="TileSet" id=4]
-[ext_resource path="res://EnemyType1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Player.gd" type="Script" id=6]
+[ext_resource path="res://scripts/MainCamera2D.gd" type="Script" id=1]
+[ext_resource path="res://tilesets/TilesetRoute.tres" type="TileSet" id=2]
+[ext_resource path="res://tilesets/TilesetRouteBridges.tres" type="TileSet" id=3]
+[ext_resource path="res://tilesets/TilesetDecos.tres" type="TileSet" id=4]
+[ext_resource path="res://prefabs/EnemyType1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=6]
 
 [node name="GameWorld" type="Node"]
 
@@ -40,6 +40,7 @@ tile_data = PoolIntArray( -19988425, 5, 65537, -19595256, 5, 65537, -19595255, 5
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Type1" type="Node" parent="Enemies"]
+editor/display_folded = true
 
 [node name="EnemyOne" parent="Enemies/Type1" instance=ExtResource( 5 )]
 position = Vector2( 1051.77, 599.667 )
