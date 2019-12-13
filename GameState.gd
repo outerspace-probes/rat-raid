@@ -6,6 +6,8 @@ var playerHealth = 100
 var playerLives = 4
 var scorePoints = 0
 
+signal score_changed
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -13,6 +15,15 @@ func _ready():
 func _process(delta):
 	
 	decreasePlayerHealth(delta)
+
+func addScorePoints(points):
+	
+	scorePoints += points
+	emit_signal("score_changed")
+	
+func getScorePoints():
+	
+	return scorePoints	
 	
 func decreasePlayerHealth(delta):
 	

@@ -1,7 +1,11 @@
 extends Area2D
 
+export var rewardPoints = 278
+
 var moveSpeed = 220
 var direction = "left"
+
+onready var GameState = get_tree().get_root().find_node("GameState", true, false)
 
 func _ready():
 	add_to_group("enemies")
@@ -41,4 +45,5 @@ func move(delta):
 	self.position.x += moveAmt
 	
 func processDie():
+	GameState.addScorePoints(rewardPoints)
 	queue_free()
