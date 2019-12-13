@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/MainCamera2D.gd" type="Script" id=1]
 [ext_resource path="res://tilesets/TilesetRoute.tres" type="TileSet" id=2]
@@ -6,6 +6,58 @@
 [ext_resource path="res://tilesets/TilesetDecos.tres" type="TileSet" id=4]
 [ext_resource path="res://prefabs/EnemyType1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=6]
+[ext_resource path="res://images/RatSprite.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=2]
+resource_name = "RatRunLeft"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 3 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "RatRunRight"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 5 ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "RatRunStraight"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
 
 [node name="GameWorld" type="Node"]
 
@@ -108,16 +160,26 @@ position = Vector2( 871.24, 973.74 )
 z_index = 99
 script = ExtResource( 6 )
 
+[node name="Sprite" type="Sprite" parent="PlayerRat"]
+texture = ExtResource( 7 )
+hframes = 7
+
+[node name="RatAnimationPlayer" type="AnimationPlayer" parent="PlayerRat"]
+anims/RatRunLeft = SubResource( 2 )
+anims/RatRunRight = SubResource( 3 )
+anims/RatRunStraight = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerRat"]
+position = Vector2( -866.021, -1006.89 )
+polygon = PoolVector2Array( 856.487, 1038.02, 845.263, 1023.95, 845.374, 1008.26, 856.128, 989.621, 846.449, 978.15, 864.242, 953.292, 870.666, 953.584, 886.958, 978.508, 875.845, 989.621, 886.141, 1012.57, 885.557, 1023.95, 875.128, 1038.02, 867.241, 1044.47 )
+
 [node name="Placeholder" type="Polygon2D" parent="PlayerRat"]
-position = Vector2( -0.530975, -6.92346 )
+visible = false
+position = Vector2( -0.530945, -6.92346 )
 scale = Vector2( 1.20047, 1.20047 )
 color = Color( 0, 0, 0, 1 )
 antialiased = true
 polygon = PoolVector2Array( 8, -8, 8, -8, 10.1371, -3.72572, 15.3726, -3.54041, 12.7466, 1.49323, 16, 8, 16, 16, 8, 32, 0.437988, 36.3413, -0.238403, 64.8845, -1.59113, 59.3381, -2.67334, 35.9354, -8.08435, 31.8772, -10.553, 27.2163, -13.6998, 21.4471, -16, 16, -16, 8, -13.3664, 2.73278, -15.5807, -3.91382, -10.4293, -3.14132, -8, -8, -16, -16, -16, -24, -10.8141, -29.1859, -5.06602, -29.066, 0, -24, 4.68994, -29.3178, 10.5151, -29.3178, 15.7272, -24.2591, 16, -16 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerRat"]
-position = Vector2( -866.021, -1006.89 )
-polygon = PoolVector2Array( 856.487, 1038.02, 846.449, 1021.17, 845.374, 1008.26, 856.128, 989.621, 846.449, 978.15, 864.732, 969.905, 886.958, 978.508, 875.845, 989.621, 884.09, 1009.7, 885.524, 1018.66, 875.128, 1038.02, 867.241, 1044.47 )
 [connection signal="area_entered" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_area_entered"]
 [connection signal="body_entered" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_body_entered"]
 [connection signal="body_exited" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_body_exited"]
