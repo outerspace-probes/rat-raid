@@ -9,9 +9,10 @@ var allowNextShoot = true
 
 signal score_changed
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	
+	playerLives = 4
+	allowNextShoot = true
 
 func _process(delta):
 	

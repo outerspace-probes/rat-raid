@@ -299,6 +299,27 @@ position = Vector2( 987.849, -5496.82 )
 [node name="EnemyOne19" parent="Enemies/Type1" instance=ExtResource( 15 )]
 position = Vector2( 1652.48, -5808.99 )
 
+[node name="EnemyOne20" parent="Enemies/Type1" instance=ExtResource( 15 )]
+position = Vector2( 1669.22, -6436.63 )
+
+[node name="EnemyOne21" parent="Enemies/Type1" instance=ExtResource( 15 )]
+position = Vector2( 1418.16, -7200.95 )
+
+[node name="EnemyOne22" parent="Enemies/Type1" instance=ExtResource( 15 )]
+position = Vector2( 268.889, -7192.58 )
+
+[node name="EnemyOne23" parent="Enemies/Type1" instance=ExtResource( 15 )]
+position = Vector2( 391.627, -8263.75 )
+
+[node name="EnemyOne24" parent="Enemies/Type1" instance=ExtResource( 15 )]
+position = Vector2( 1242.42, -8481.33 )
+
+[node name="EnemyOne25" parent="Enemies/Type1" instance=ExtResource( 15 )]
+position = Vector2( 653.84, -9069.91 )
+
+[node name="EnemyOne26" parent="Enemies/Type1" instance=ExtResource( 15 )]
+position = Vector2( 1340.06, -9753.34 )
+
 [node name="Gates" type="Node" parent="."]
 
 [node name="PlayerRat" type="Area2D" parent="."]
