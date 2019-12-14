@@ -5,8 +5,6 @@ export var rewardPoints = 278
 var moveSpeed = 220
 var direction = "left"
 
-onready var GameState = get_tree().get_root().find_node("GameState", true, false)
-
 func _ready():
 	add_to_group("enemies")
 

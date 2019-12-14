@@ -16,7 +16,6 @@ var isRefueling = false
 
 const laserMissle = preload("res://prefabs/PlayerLaserMissle.tscn")
 onready var AnimPlayer = get_node("RatAnimationPlayer")
-onready var GameState = get_tree().get_root().find_node("GameState", true, false)
 
 func _ready():
 	
@@ -81,6 +80,7 @@ func move(delta):
 			setAnimSpeedScale()	
 
 func setAnimSpeedScale():
+	
 	AnimPlayer.set_speed_scale(speedCurrent / speedDefault)
 		
 func createLaser(pos):
@@ -95,6 +95,9 @@ func createLaser(pos):
 func _on_PlayerRat_area_entered(area):
 		
 	if area.is_in_group("enemies"):
+		processDie()
+		
+	if area.is_in_group("checkpoint"):
 		processDie()
 		
 	if area.is_in_group("fuel"):

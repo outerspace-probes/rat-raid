@@ -5,7 +5,7 @@ export var missleSpeed = 1400
 onready var playerNode = get_tree().get_root().find_node("PlayerRat", true, false)
 onready var bridgeNode = get_tree().get_root().find_node("RouteBridgesTileMap", true, false)
 onready var routeNode = get_tree().get_root().find_node("RouteTileMap", true, false)
-onready var GameState = get_tree().get_root().find_node("GameState", true, false)
+
 var isOnBridge = false
 
 func _ready():
