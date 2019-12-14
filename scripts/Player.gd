@@ -6,18 +6,20 @@ export var speedMax = 620
 export var accelerationBrake = 800
 export var speedLeftRight = 380
 export var refuelSpeed = 20
-var speedCurrent
 
-const laserMissle = preload("res://prefabs/PlayerLaserMissle.tscn")
+var speedCurrent
 var bridgeNode 
 var routeNode
 var initPos
 var isOnBridge = false
 var isRefueling = false
+
+const laserMissle = preload("res://prefabs/PlayerLaserMissle.tscn")
 onready var AnimPlayer = get_node("RatAnimationPlayer")
 onready var GameState = get_tree().get_root().find_node("GameState", true, false)
 
 func _ready():
+	
 	initPos = self.position
 	speedCurrent = speedDefault
 	bridgeNode = get_tree().get_root().find_node("RouteBridgesTileMap", true, false)

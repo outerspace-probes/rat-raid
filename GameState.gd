@@ -1,17 +1,18 @@
 extends Node
 
-export var healthDecreaseSpeed = 40
+export var healthDecreaseSpeed = 35
+export var playerLifes = 4
 
 var playerHealth = 100
-var playerLives = 4
 var scorePoints = 0
 var allowNextShoot = true
+var lifesLeft
 
 signal score_changed
 
 func _ready():
 	
-	playerLives = 4
+	lifesLeft = playerLifes
 	allowNextShoot = true
 
 func _process(delta):
