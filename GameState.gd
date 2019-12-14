@@ -1,6 +1,6 @@
 extends Node
 
-export var healthDecreaseSpeed = 15
+export var healthDecreaseSpeed = 35
 
 var playerHealth = 100
 var playerLives = 4
@@ -15,6 +15,10 @@ func _ready():
 func _process(delta):
 	
 	decreasePlayerHealth(delta)
+
+func playerRefuel(fuelAmt):
+	
+	playerHealth += fuelAmt
 
 func addScorePoints(points):
 	

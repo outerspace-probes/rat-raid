@@ -5,15 +5,17 @@ export var speedMin = 220
 export var speedMax = 620
 export var accelerationBrake = 800
 export var speedLeftRight = 380
-
-export var speedCurrent = 0
+export var refuelSpeed = 30
+var speedCurrent
 
 const laserMissle = preload("res://prefabs/PlayerLaserMissle.tscn")
 var bridgeNode 
 var routeNode
 var initPos
 var isOnBridge = false
+var isRefueling = false
 onready var AnimPlayer = get_node("RatAnimationPlayer")
+onready var GameState = get_tree().get_root().find_node("GameState", true, false)
 
 func _ready():
 	initPos = self.position
@@ -25,7 +27,10 @@ func _ready():
 func _process(delta):
 	
 	move(delta)
-				
+	
+	if(isRefueling):
+		GameState.playerRefuel(refuelSpeed * delta)
+					
 func _input(event):
 	
 	# fire
@@ -81,11 +86,20 @@ func createLaser(pos):
 	laser.set_position(spawnPos)
 	get_tree().get_root().add_child(laser)
 
+# collisions
 
 func _on_PlayerRat_area_entered(area):
 		
 	if area.is_in_group("enemies"):
 		processDie()
+		
+	if area.is_in_group("fuel"):
+		isRefueling = true
+
+func _on_PlayerRat_area_exited(area):
+	
+	if area.is_in_group("fuel"):
+		isRefueling = false
 		
 func _on_PlayerRat_body_entered(body):
 	
@@ -105,3 +119,6 @@ func _on_PlayerRat_body_exited(body):
 	
 func processDie():
 	self.position = initPos
+
+
+
