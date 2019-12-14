@@ -7,6 +7,7 @@ var playerHealth = 100
 var scorePoints = 0
 var allowNextShoot = true
 var lifesLeft
+var checkpointReached = 0
 
 signal score_changed
 
@@ -18,6 +19,11 @@ func _ready():
 func _process(delta):
 	
 	decreasePlayerHealth(delta)
+
+func checkpointHit():
+
+	checkpointReached += 1
+	print("checkpoint hit " + str(checkpointReached))
 
 func playerRefuel(fuelAmt):
 	
