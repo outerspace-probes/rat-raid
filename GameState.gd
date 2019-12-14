@@ -40,7 +40,8 @@ func getScorePoints():
 	
 func decreasePlayerHealth(delta):
 	
-	playerHealth -= healthDecreaseSpeed * delta / 10
+	if playerHealth > -1:
+		playerHealth -= healthDecreaseSpeed * delta / 10
 	
 func getPlayerHealth():
 	

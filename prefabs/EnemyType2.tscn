@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/EnemyType1.gd" type="Script" id=1]
-[ext_resource path="res://images/SlimakRuch.png" type="Texture" id=2]
+[ext_resource path="res://images/GolabRuch.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "EnemyMove"
@@ -17,18 +17,21 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 0, 1 ]
+"values": [ 2, 3 ]
 }
 
-[node name="EnemyOne" type="Area2D"]
+[node name="EnemyTwo" type="Area2D"]
 script = ExtResource( 1 )
+rewardPoints = 478
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+flip_h = true
 hframes = 4
+frame = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -41.7927, -14.2053, -37.2633, -24.2348, -21.0867, -28.7642, -8.46896, -25.5289, -1.99834, -14.5288, 15.1488, -27.4701, 37.4725, -24.5583, 43.9432, -10.6464, 39.7373, 6.82428, 29.3842, 15.5596, 35.5313, 24.295, 34.2372, 27.2068, -35.6456, 27.2068, -27.8809, 13.2949, -40.1751, 6.50075, -44.7045, -9.02878 )
+polygon = PoolVector2Array( -40.4986, -6.11699, -35.3221, -32.9701, -12.9984, -45.9114, 20.0018, -44.9408, 39.4137, -28.7642, 39.4137, -7.08759, 39.7373, 6.82428, 34.2372, 27.2068, 11.9135, 49.854, -10.0866, 49.2069, -38.5574, 29.4715, -40.1751, 6.50075 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "EnemyMove"

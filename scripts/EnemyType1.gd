@@ -5,6 +5,8 @@ export var rewardPoints = 278
 var moveSpeed = 220
 var direction = "left"
 
+onready var Sprite = get_node("Sprite")
+
 func _ready():
 	add_to_group("enemies")
 
@@ -28,8 +30,10 @@ func _on_EnemyOne_body_entered(body):
 func changeDirection():
 	if direction == "left":
 		direction = "right"
+		Sprite.flip_h = true
 	else:
 		direction = "left"	
+		Sprite.flip_h = false
 
 func move(delta):
 		# move
