@@ -1,16 +1,15 @@
 extends Area2D
 
-export var missleSpeed = 1200
+export var missleSpeed = 1400
 
-var playerNode
-var bridgeNode
+onready var playerNode = get_tree().get_root().find_node("PlayerRat", true, false)
+onready var bridgeNode = get_tree().get_root().find_node("RouteBridgesTileMap", true, false)
+onready var routeNode = get_tree().get_root().find_node("RouteTileMap", true, false)
+onready var GameState = get_tree().get_root().find_node("GameState", true, false)
 var isOnBridge = false
 
 func _ready():
-	
-	playerNode = get_tree().get_root().find_node("PlayerRat", true, false)
-	bridgeNode = get_tree().get_root().find_node("RouteBridgesTileMap", true, false)
-	
+		
 	self.position.x = playerNode.position.x	
 	set_process(true)	
 	isOnBridge = overlaps_body(bridgeNode)
@@ -18,25 +17,21 @@ func _ready():
 	
 	# detect exit screen and destroy object
 	yield(get_node("VisibilityNotifier2D"), "screen_exited")
-	queue_free()
+	destroy()
 
 func _process(delta):
+	
 	self.position.x = playerNode.position.x
 	self.position.y -= missleSpeed * delta
 	
+	if overlaps_body(routeNode) && !overlaps_body(bridgeNode):
+		destroy()
+	
 func _on_PlayerLaserMissle_area_entered(area):
+	
 	if area.is_in_group("enemies"):
 		destroy()
-
-func _on_PlayerLaserMissle_body_entered(body):
-	
-	if body.name == "RouteBridgesTileMap":
-		isOnBridge = true
-
-func _on_PlayerLaserMissle_body_exited(body):
-	
-	if body.name == "RouteBridgesTileMap":
-		isOnBridge = false
 		
 func destroy():
+	GameState.allowNextShoot = true
 	queue_free()

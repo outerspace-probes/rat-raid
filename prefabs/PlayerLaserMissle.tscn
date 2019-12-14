@@ -25,5 +25,3 @@ texture = ExtResource( 2 )
 position = Vector2( 0.82462, 2.38419e-007 )
 scale = Vector2( 0.496366, 1.66937 )
 [connection signal="area_entered" from="." to="." method="_on_PlayerLaserMissle_area_entered"]
-[connection signal="body_entered" from="." to="." method="_on_PlayerLaserMissle_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_PlayerLaserMissle_body_exited"]

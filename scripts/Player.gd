@@ -5,7 +5,7 @@ export var speedMin = 220
 export var speedMax = 620
 export var accelerationBrake = 800
 export var speedLeftRight = 380
-export var refuelSpeed = 30
+export var refuelSpeed = 20
 var speedCurrent
 
 const laserMissle = preload("res://prefabs/PlayerLaserMissle.tscn")
@@ -35,7 +35,9 @@ func _input(event):
 	
 	# fire
 	if event.is_action_pressed("FIRE") && event.is_echo() == false:
-		createLaser(self.position)
+		if GameState.allowNextShoot == true:
+			createLaser(self.position)
+			GameState.allowNextShoot = false
 		
 	# left-right animations	
 	if event.is_action_pressed("MOVE_LEFT") && event.is_echo() == false:	
@@ -119,6 +121,3 @@ func _on_PlayerRat_body_exited(body):
 	
 func processDie():
 	self.position = initPos
-
-
-

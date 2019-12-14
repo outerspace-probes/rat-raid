@@ -1,10 +1,11 @@
 extends Node
 
-export var healthDecreaseSpeed = 35
+export var healthDecreaseSpeed = 40
 
 var playerHealth = 100
 var playerLives = 4
 var scorePoints = 0
+var allowNextShoot = true
 
 signal score_changed
 
