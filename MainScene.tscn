@@ -171,6 +171,7 @@ text = "0"
 align = 2
 
 [node name="EnemyStartMoveTriggers2" type="Node2D" parent="MainCamera2D"]
+editor/display_folded = true
 visible = false
 
 [node name="LandEnemyTrigger" type="Area2D" parent="MainCamera2D/EnemyStartMoveTriggers2"]
@@ -253,101 +254,103 @@ position = Vector2( 841.009, -8709.24 )
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="Type1" type="Node" parent="Enemies"]
+[node name="LandType1" type="Node" parent="Enemies"]
+editor/display_folded = true
 
-[node name="EnemyOne" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 1721.43, -1754.67 )
 
-[node name="EnemyOne5" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne5" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 1304.01, -2361.83 )
 
-[node name="EnemyOne7" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne7" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 1163.6, -3227.04 )
 
-[node name="EnemyOne9" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne9" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 837.252, -4426.18 )
 
-[node name="EnemyOne10" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne10" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 928.326, -5686.04 )
 
-[node name="EnemyOne12" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne12" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 1209.14, -6357.71 )
 
-[node name="EnemyOne2" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne2" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 570.407, 438.719 )
 
-[node name="EnemyOne3" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne3" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 1148.96, 361.101 )
 
-[node name="EnemyOne4" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne4" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 1042.71, -371.287 )
 
-[node name="EnemyOne6" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne6" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 228.26, -97.0258 )
 
-[node name="EnemyOne8" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne8" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 611.712, -1048.48 )
 
-[node name="EnemyOne11" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne11" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 318.996, -2913.45 )
 
-[node name="EnemyOne13" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne13" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 1630.01, -3799.8 )
 
-[node name="EnemyOne15" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne15" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 1406.37, -5064.45 )
 
-[node name="EnemyOne16" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne16" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 330.879, -5498.67 )
 
-[node name="EnemyOne20" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne20" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 523.204, -7081.74 )
 
-[node name="EnemyOne21" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne21" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 1418.16, -7200.95 )
 
-[node name="EnemyOne23" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne23" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 391.627, -8263.75 )
 
-[node name="EnemyOne25" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne25" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 558.413, -8922.23 )
 
-[node name="EnemyOne26" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne26" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 1332.47, -9582.58 )
 
-[node name="EnemyOne27" parent="Enemies/Type1" instance=ExtResource( 14 )]
+[node name="EnemyOne27" parent="Enemies/LandType1" instance=ExtResource( 14 )]
 position = Vector2( 630.441, -9939.28 )
 
-[node name="Type2" type="Node" parent="Enemies"]
+[node name="Flying" type="Node" parent="Enemies"]
+editor/display_folded = true
 
-[node name="EnemyTwo" parent="Enemies/Type2" instance=ExtResource( 15 )]
+[node name="EnemyTwo" parent="Enemies/Flying" instance=ExtResource( 15 )]
 position = Vector2( 1978.4, -276.187 )
 
-[node name="EnemyTwo2" parent="Enemies/Type2" instance=ExtResource( 15 )]
+[node name="EnemyTwo2" parent="Enemies/Flying" instance=ExtResource( 15 )]
 position = Vector2( 1960.7, -1167.19 )
 
-[node name="EnemyTwo3" parent="Enemies/Type2" instance=ExtResource( 15 )]
+[node name="EnemyTwo3" parent="Enemies/Flying" instance=ExtResource( 15 )]
 position = Vector2( 1957.38, -2071.89 )
 
-[node name="EnemyTwo4" parent="Enemies/Type2" instance=ExtResource( 15 )]
+[node name="EnemyTwo4" parent="Enemies/Flying" instance=ExtResource( 15 )]
 position = Vector2( 1948.06, -2843.98 )
 
-[node name="EnemyTwo5" parent="Enemies/Type2" instance=ExtResource( 15 )]
+[node name="EnemyTwo5" parent="Enemies/Flying" instance=ExtResource( 15 )]
 position = Vector2( 1946.79, -3704.08 )
 
-[node name="EnemyTwo6" parent="Enemies/Type2" instance=ExtResource( 15 )]
+[node name="EnemyTwo6" parent="Enemies/Flying" instance=ExtResource( 15 )]
 position = Vector2( 1944.64, -4559.7 )
 
-[node name="EnemyTwo7" parent="Enemies/Type2" instance=ExtResource( 15 )]
+[node name="EnemyTwo7" parent="Enemies/Flying" instance=ExtResource( 15 )]
 position = Vector2( 1962.45, -5834.23 )
 
-[node name="EnemyTwo8" parent="Enemies/Type2" instance=ExtResource( 15 )]
+[node name="EnemyTwo8" parent="Enemies/Flying" instance=ExtResource( 15 )]
 position = Vector2( 1969.4, -7525.91 )
 
-[node name="EnemyTwo9" parent="Enemies/Type2" instance=ExtResource( 15 )]
+[node name="EnemyTwo9" parent="Enemies/Flying" instance=ExtResource( 15 )]
 position = Vector2( 1977.04, -8788.01 )
 
-[node name="EnemyTwo10" parent="Enemies/Type2" instance=ExtResource( 15 )]
+[node name="EnemyTwo10" parent="Enemies/Flying" instance=ExtResource( 15 )]
 position = Vector2( 1992.2, -10024 )
 
 [node name="CheckpointGates" type="Node" parent="."]
@@ -360,6 +363,7 @@ position = Vector2( 990.707, -4735.98 )
 position = Vector2( 1156.02, -9047.58 )
 
 [node name="PlayerRat" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 864.424, 1143.58 )
 z_index = 99
 script = ExtResource( 17 )
