@@ -26,14 +26,14 @@ font_path = "res://fonts/Kenney Pixel Square.ttf"
 size = 57
 font_data = SubResource( 1 )
 
-[sub_resource type="DynamicFontData" id=4]
+[sub_resource type="DynamicFontData" id=3]
 font_path = "res://fonts/Kenney Pixel Square.ttf"
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=4]
 size = 21
-font_data = SubResource( 4 )
+font_data = SubResource( 3 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 1388.51, 88.8318 )
 
 [sub_resource type="Animation" id=6]
@@ -96,7 +96,6 @@ drag_margin_bottom = 0.0
 script = ExtResource( 1 )
 
 [node name="UIbox" type="Node2D" parent="MainCamera2D"]
-editor/display_folded = true
 position = Vector2( 0, 430 )
 z_index = 99
 
@@ -166,7 +165,7 @@ margin_left = -112.746
 margin_top = -20.4702
 margin_right = 224.254
 margin_bottom = 12.5298
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 text = "0"
 align = 2
 
@@ -179,16 +178,17 @@ position = Vector2( 45.4412, -40.6578 )
 z_index = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCamera2D/EnemyStartMoveTriggers2/LandEnemyTrigger"]
-shape = SubResource( 9 )
+shape = SubResource( 5 )
 
 [node name="FlyingEnemyTrigger" type="Area2D" parent="MainCamera2D/EnemyStartMoveTriggers2"]
 position = Vector2( 69.8289, -832.199 )
 z_index = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCamera2D/EnemyStartMoveTriggers2/FlyingEnemyTrigger"]
-shape = SubResource( 9 )
+shape = SubResource( 5 )
 
 [node name="Terrain" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="RouteTileMap" type="TileMap" parent="Terrain"]
 tile_set = ExtResource( 10 )

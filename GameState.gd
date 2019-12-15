@@ -3,7 +3,7 @@ extends Node
 export var healthDecreaseSpeed = 35
 export var playerLifes = 4
 
-var playerHealth = 100
+export var playerHealth = 100
 var scorePoints = 0
 var allowNextShoot = true
 var lifesLeft
