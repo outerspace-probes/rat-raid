@@ -3,11 +3,13 @@ extends Node
 export var healthDecreaseSpeed = 35
 export var playerLifes = 4
 
-export var playerHealth = 100
+var playerHealth = 100
 var scorePoints = 0
 var allowNextShoot = true
 var lifesLeft
 var checkpointReached = 0
+
+onready var main_scene = preload("res://MainScene.tscn")
 
 signal score_changed
 
@@ -36,8 +38,14 @@ func restartGame():
 	reloadMainScene()
 
 func reloadMainScene():
-
-	var _rel = get_tree().reload_current_scene()
+	
+	call_deferred("deferredReload")
+	
+func deferredReload():
+	
+	get_tree().get_root().find_node("PlayerLaserMissles",true,false).free()
+	get_tree().get_root().find_node("GameWorld",true,false).free()
+	var _rel = get_tree().change_scene_to(main_scene)
 
 func checkpointHit():
 

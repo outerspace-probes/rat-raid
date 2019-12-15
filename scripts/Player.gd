@@ -88,7 +88,7 @@ func createLaser(pos):
 	var spawnPos = Vector2(pos.x,pos.y + 20)
 	var laser = laserMissle.instance()
 	laser.set_position(spawnPos)
-	get_tree().get_root().add_child(laser)
+	get_tree().get_root().find_node("PlayerLaserMissles",true,false).add_child(laser)
 
 # collisions
 
