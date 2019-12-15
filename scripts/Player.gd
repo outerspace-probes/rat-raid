@@ -125,4 +125,5 @@ func _on_PlayerRat_body_exited(body):
 			processDie()
 	
 func processDie():
-	self.position = initPos
+	
+	GameState.processPlayerDie()

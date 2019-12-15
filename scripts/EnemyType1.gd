@@ -12,7 +12,6 @@ onready var Sprite = get_node("Sprite")
 func _ready():
 	add_to_group("enemies")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
 	if !isWaiting:
@@ -46,7 +45,8 @@ func changeDirection():
 		Sprite.flip_h = false
 
 func move(delta):
-		# move
+	
+	# move
 	var moveAmt
 	
 	if direction == "left":

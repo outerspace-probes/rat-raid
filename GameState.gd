@@ -20,6 +20,25 @@ func _process(delta):
 	
 	decreasePlayerHealth(delta)
 
+func processPlayerDie():
+	
+	if playerLifes > 0:
+		restartFromCheckpoint()
+	else:
+		restartGame()
+		
+func restartFromCheckpoint():
+	# checkpoint pos			
+	reloadMainScene()
+
+func restartGame():
+	# reinit state
+	reloadMainScene()
+
+func reloadMainScene():
+
+	var _rel = get_tree().reload_current_scene()
+
 func checkpointHit():
 
 	checkpointReached += 1

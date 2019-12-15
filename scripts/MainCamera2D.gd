@@ -7,6 +7,5 @@ func _ready():
 	self.position.x = playerNode.position.x
 	self.position.y = playerNode.position.y - 300
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	self.position.y = playerNode.position.y - 300
