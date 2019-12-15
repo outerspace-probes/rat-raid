@@ -1,6 +1,6 @@
 extends Area2D
 
-export var missleSpeed = 1400
+export var missleSpeed = 1700
 
 onready var playerNode = get_tree().get_root().find_node("PlayerRat", true, false)
 onready var bridgeNode = get_tree().get_root().find_node("RouteBridgesTileMap", true, false)

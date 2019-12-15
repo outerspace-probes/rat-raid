@@ -1,13 +1,13 @@
 extends Node
 
-export var healthDecreaseSpeed = 35
+export var healthDecreaseSpeed = 40
 export var playerLifes = 4
 
 var playerHealth = 100
 var scorePoints = 0
 var allowNextShoot = true
 var lifesLeft
-var checkpointReached = 0
+export var checkpointReached = 0
 
 onready var main_scene = preload("res://MainScene.tscn")
 
@@ -50,7 +50,6 @@ func deferredReload():
 func checkpointHit():
 
 	checkpointReached += 1
-	print("checkpoint hit " + str(checkpointReached))
 
 func playerRefuel(fuelAmt):
 	
