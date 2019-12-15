@@ -1,9 +1,11 @@
 extends Area2D
 
 export var rewardPoints = 278
+export var isFlyingEnemy = false
 
 var moveSpeed = 220
 var direction = "left"
+var isWaiting = true
 
 onready var Sprite = get_node("Sprite")
 
@@ -13,18 +15,26 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	move(delta)
-	
+	if !isWaiting:
+		move(delta)
+		
 func _on_EnemyOne_area_entered(area):
 		
 	if area.is_in_group("playermissles"):
 		processDie()
 	elif area.name == "PlayerRat":
 		processDie()
-	
+		
+	elif area.name == "LandEnemyTrigger":
+		if  !isFlyingEnemy:
+			isWaiting = false	
+	elif area.name == "FlyingEnemyTrigger":
+		if isFlyingEnemy:
+			isWaiting = false
+		
 # collision with tilemap
 func _on_EnemyOne_body_entered(body):
-	if body.name == "RouteTileMap":
+	if !isFlyingEnemy && body.name == "RouteTileMap":
 		changeDirection()
 	
 func changeDirection():

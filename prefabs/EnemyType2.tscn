@@ -23,12 +23,11 @@ tracks/0/keys = {
 [node name="EnemyTwo" type="Area2D"]
 script = ExtResource( 1 )
 rewardPoints = 478
+isFlyingEnemy = true
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
-flip_h = true
 hframes = 4
-frame = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -40.4986, -6.11699, -35.3221, -32.9701, -12.9984, -45.9114, 20.0018, -44.9408, 39.4137, -28.7642, 39.4137, -7.08759, 39.7373, 6.82428, 34.2372, 27.2068, 11.9135, 49.854, -10.0866, 49.2069, -38.5574, 29.4715, -40.1751, 6.50075 )
