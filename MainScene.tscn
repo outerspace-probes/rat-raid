@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scripts/MainCamera2D.gd" type="Script" id=1]
 [ext_resource path="res://images/ui/healthbar/bg.png" type="Texture" id=2]
@@ -37,6 +37,36 @@ font_data = SubResource( 3 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 1388.51, 88.8318 )
+
+[sub_resource type="Animation" id=9]
+resource_name = "RatDying"
+length = 0.2
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=6]
 length = 0.2
@@ -446,6 +476,7 @@ hframes = 7
 frame = 1
 
 [node name="RatAnimationPlayer" type="AnimationPlayer" parent="PlayerRat"]
+anims/RatDying = SubResource( 9 )
 anims/RatRunLeft = SubResource( 6 )
 anims/RatRunRight = SubResource( 7 )
 anims/RatRunStraight = SubResource( 8 )

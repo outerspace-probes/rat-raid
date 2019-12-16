@@ -1,5 +1,7 @@
 extends Node
 
+# state vars
+
 export var healthDecreaseSpeed = 30
 export var playerLifes = 4
 
@@ -10,6 +12,9 @@ var lifesLeft
 var isActiveRun = false
 var playerSpawnPos = Vector2(990,0)
 export var checkpointReached = 0
+
+# initial state backup
+var initSpawnPos = playerSpawnPos
 
 onready var main_scene = preload("res://MainScene.tscn")
 
@@ -35,8 +40,8 @@ func getPlayerSpawnPos():
 
 func processPlayerDie():
 	
-	if playerLifes > 0:
-		playerLifes -= 1
+	if lifesLeft > 0:
+		lifesLeft -= 1
 		emit_signal("lifes_changed")
 		restartFromCheckpoint()
 	else:
@@ -48,6 +53,10 @@ func restartFromCheckpoint():
 
 func restartGame():
 	# reinit state
+	scorePoints = 0
+	checkpointReached = 0
+	lifesLeft = playerLifes
+	playerSpawnPos = initSpawnPos
 	reloadMainScene()
 
 func reloadMainScene():
@@ -84,7 +93,7 @@ func getScorePoints():
 
 func getLifesNum():
 	
-	return playerLifes	
+	return lifesLeft	
 	
 func decreasePlayerHealth(delta):
 	

@@ -49,17 +49,9 @@ func _process(delta):
 			isStartingAnim = true
 			isWaitingForStart = true
 			self.show()	
-				
-					
+									
 func _input(event):
-	
-	if isWaitingForStart:
-		if event.is_action_pressed("FIRE") || event.is_action_pressed("MOVE_LEFT") || event.is_action_pressed("MOVE_RIGHT") || event.is_action_pressed("ACCELERATE") || event.is_action_pressed("BREAK"):
-			isRunStarted = true
-			isWaitingForStart = false
-			GameState.isActiveRun = true
-			AnimPlayer.play("RatRunStraight")
-	
+		
 	if isRunStarted:
 		# fire
 		if event.is_action_pressed("FIRE") && event.is_echo() == false:
@@ -77,6 +69,13 @@ func _input(event):
 			AnimPlayer.set_current_animation("RatRunRight")
 		if event.is_action_released("MOVE_RIGHT"):
 			AnimPlayer.set_current_animation("RatRunStraight")
+
+	elif isWaitingForStart:
+			if event.is_action_pressed("FIRE") || event.is_action_pressed("MOVE_LEFT") || event.is_action_pressed("MOVE_RIGHT") || event.is_action_pressed("ACCELERATE") || event.is_action_pressed("BREAK"):
+				isRunStarted = true
+				isWaitingForStart = false
+				GameState.isActiveRun = true
+				AnimPlayer.play("RatRunStraight")
 
 func move(delta):
 	
