@@ -10,6 +10,7 @@ var scorePoints = 0
 var allowNextShoot = true
 var lifesLeft
 var isActiveRun = false
+var isGameOver = false
 var playerSpawnPos = Vector2(990,0)
 export var checkpointReached = 0
 
@@ -21,6 +22,7 @@ onready var main_scene = preload("res://MainScene.tscn")
 signal score_changed
 signal lifes_changed
 signal fuel_empty
+signal game_over
 
 func _ready():
 	
@@ -34,6 +36,13 @@ func _process(delta):
 		if playerHealth < 0:
 			emit_signal("fuel_empty")
 
+func _input(event):
+	
+	if isGameOver:
+		if event.is_action_pressed("FIRE") || event.is_action_pressed("MOVE_LEFT") || event.is_action_pressed("MOVE_RIGHT") || event.is_action_pressed("ACCELERATE") || event.is_action_pressed("BREAK"):
+			isGameOver = false
+			restartGame()
+
 func getPlayerSpawnPos():
 	
 	return playerSpawnPos
@@ -45,7 +54,8 @@ func processPlayerDie():
 		emit_signal("lifes_changed")
 		restartFromCheckpoint()
 	else:
-		restartGame()
+		isGameOver = true
+		emit_signal("game_over")
 		
 func restartFromCheckpoint():
 		

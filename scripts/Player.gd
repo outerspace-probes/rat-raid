@@ -175,3 +175,4 @@ func processDie():
 func _on_dying_timeout():
 	
 	GameState.processPlayerDie()
+	hide()
