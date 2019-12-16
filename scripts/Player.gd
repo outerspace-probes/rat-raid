@@ -16,6 +16,7 @@ var isOnBridge = false
 var isRefueling = false
 var isRunStarted = false
 var isWaitingForStart = false
+var isDyingState = false
 var isStartingAnim = true
 
 const laserMissle = preload("res://prefabs/PlayerLaserMissle.tscn")
@@ -49,7 +50,7 @@ func _process(delta):
 			isStartingAnim = true
 			isWaitingForStart = true
 			self.show()	
-									
+										
 func _input(event):
 		
 	if isRunStarted:
@@ -155,5 +156,22 @@ func _on_GameState_fuel_empty():
 	processDie()
 	
 func processDie():
+	
+	isDyingState = true
+	
+	isRunStarted = false
+	isWaitingForStart = false
+	isStartingAnim = false
+	GameState.isActiveRun = false
+	
+	AnimPlayer.play("RatDying")	
+	
+	var timer = Timer.new()
+	timer.connect("timeout",self,"_on_dying_timeout")
+	timer.set_wait_time(2)
+	add_child(timer)
+	timer.start()
+	
+func _on_dying_timeout():
 	
 	GameState.processPlayerDie()
