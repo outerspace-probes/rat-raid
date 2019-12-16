@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scripts/MainCamera2D.gd" type="Script" id=1]
 [ext_resource path="res://images/ui/healthbar/bg.png" type="Texture" id=2]
@@ -16,9 +16,10 @@
 [ext_resource path="res://prefabs/FuelItem.tscn" type="PackedScene" id=14]
 [ext_resource path="res://prefabs/EnemyType1.tscn" type="PackedScene" id=15]
 [ext_resource path="res://prefabs/EnemyType2.tscn" type="PackedScene" id=16]
-[ext_resource path="res://prefabs/Checkpoint.tscn" type="PackedScene" id=17]
-[ext_resource path="res://scripts/Player.gd" type="Script" id=18]
-[ext_resource path="res://images/RatSprite.png" type="Texture" id=19]
+[ext_resource path="res://scripts/CheckpointGates.gd" type="Script" id=17]
+[ext_resource path="res://prefabs/Checkpoint.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=19]
+[ext_resource path="res://images/RatSprite.png" type="Texture" id=20]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/Kenney Pixel Square.ttf"
@@ -423,23 +424,24 @@ position = Vector2( 1609.31, -21858.1 )
 position = Vector2( 1955.69, -5627.71 )
 
 [node name="CheckpointGates" type="Node" parent="."]
+script = ExtResource( 17 )
 
-[node name="Checkpoint1" parent="CheckpointGates" instance=ExtResource( 17 )]
+[node name="Checkpoint1" parent="CheckpointGates" instance=ExtResource( 18 )]
 position = Vector2( 1019.82, -7515.97 )
 
-[node name="Checkpoint2" parent="CheckpointGates" instance=ExtResource( 17 )]
+[node name="Checkpoint2" parent="CheckpointGates" instance=ExtResource( 18 )]
 position = Vector2( 969.508, -13720.9 )
 
-[node name="Checkpoint3" parent="CheckpointGates" instance=ExtResource( 17 )]
+[node name="Checkpoint3" parent="CheckpointGates" instance=ExtResource( 18 )]
 position = Vector2( 1089.63, -22506.8 )
 
 [node name="PlayerRat" type="Area2D" parent="."]
 position = Vector2( 990, 0 )
 z_index = 99
-script = ExtResource( 18 )
+script = ExtResource( 19 )
 
 [node name="Sprite" type="Sprite" parent="PlayerRat"]
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 hframes = 7
 frame = 1
 

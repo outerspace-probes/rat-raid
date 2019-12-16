@@ -8,5 +8,8 @@ func _on_Checkpoint_area_entered(area):
 	
 	if area.is_in_group("playermissles"):
 		
-		GameState.checkpointHit()
-		queue_free()
+		GameState.checkpointHit(self)
+		
+func destroy():
+	
+	queue_free()

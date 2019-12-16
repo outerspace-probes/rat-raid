@@ -59,12 +59,14 @@ func deferredReload():
 	isActiveRun = false
 	playerHealth = 100
 	# get_tree().get_root().find_node("PlayerLaserMissles",true,false).free()
-	get_tree().get_root().find_node("GameWorld",true,false).free()
+	get_tree().get_root().find_node("GameWorld",true,false).queue_free()
 	var _rel = get_tree().change_scene_to(main_scene)
-
-func checkpointHit():
+	
+func checkpointHit(checkpointObj):
 
 	checkpointReached += 1
+	playerSpawnPos = checkpointObj.position
+	checkpointObj.destroy()
 
 func playerRefuel(fuelAmt):
 	
