@@ -1,17 +1,21 @@
 extends Node
 
-export var healthDecreaseSpeed = 40
+export var healthDecreaseSpeed = 30
 export var playerLifes = 4
 
 var playerHealth = 100
 var scorePoints = 0
 var allowNextShoot = true
 var lifesLeft
+var isActiveRun = false
+var playerSpawnPos = Vector2(990,0)
 export var checkpointReached = 0
 
 onready var main_scene = preload("res://MainScene.tscn")
 
 signal score_changed
+signal lifes_changed
+signal fuel_empty
 
 func _ready():
 	
@@ -20,17 +24,26 @@ func _ready():
 
 func _process(delta):
 	
-	decreasePlayerHealth(delta)
+	if isActiveRun:
+		decreasePlayerHealth(delta)
+		if playerHealth < 0:
+			emit_signal("fuel_empty")
+
+func getPlayerSpawnPos():
+	
+	return playerSpawnPos
 
 func processPlayerDie():
 	
 	if playerLifes > 0:
+		playerLifes -= 1
+		emit_signal("lifes_changed")
 		restartFromCheckpoint()
 	else:
 		restartGame()
 		
 func restartFromCheckpoint():
-	# checkpoint pos			
+		
 	reloadMainScene()
 
 func restartGame():
@@ -43,7 +56,9 @@ func reloadMainScene():
 	
 func deferredReload():
 	
-	get_tree().get_root().find_node("PlayerLaserMissles",true,false).free()
+	isActiveRun = false
+	playerHealth = 100
+	# get_tree().get_root().find_node("PlayerLaserMissles",true,false).free()
 	get_tree().get_root().find_node("GameWorld",true,false).free()
 	var _rel = get_tree().change_scene_to(main_scene)
 
@@ -53,7 +68,8 @@ func checkpointHit():
 
 func playerRefuel(fuelAmt):
 	
-	playerHealth += fuelAmt
+	if playerHealth < 100:
+		playerHealth += fuelAmt
 
 func addScorePoints(points):
 	
@@ -63,6 +79,10 @@ func addScorePoints(points):
 func getScorePoints():
 	
 	return scorePoints	
+
+func getLifesNum():
+	
+	return playerLifes	
 	
 func decreasePlayerHealth(delta):
 	

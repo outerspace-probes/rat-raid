@@ -10,46 +10,73 @@ export var refuelSpeed = 20
 var speedCurrent
 var bridgeNode 
 var routeNode
-var initPos
+var spawnInitPos = null
+var startAnimOffset = 600
 var isOnBridge = false
 var isRefueling = false
+var isRunStarted = false
+var isWaitingForStart = false
+var isStartingAnim = true
 
 const laserMissle = preload("res://prefabs/PlayerLaserMissle.tscn")
 onready var AnimPlayer = get_node("RatAnimationPlayer")
 
 func _ready():
 	
-	initPos = self.position
+	self.hide()
+	spawnInitPos = GameState.getPlayerSpawnPos()
+	self.position = Vector2(spawnInitPos.x, spawnInitPos.y + startAnimOffset)
 	speedCurrent = speedDefault
 	bridgeNode = get_tree().get_root().find_node("RouteBridgesTileMap", true, false)
 	routeNode = get_tree().get_root().find_node("RouteTileMap", true, false)
-	AnimPlayer.play("RatRunStraight")
+	AnimPlayer.stop()	
+	GameState.connect("fuel_empty",self,"_on_GameState_fuel_empty")
 	
 func _process(delta):
 	
-	move(delta)
-	
-	if(isRefueling):
-		GameState.playerRefuel(refuelSpeed * delta)
+	if isRunStarted:
+		
+		move(delta)
+		
+		if(isRefueling):
+			GameState.playerRefuel(refuelSpeed * delta)
+			
+	elif isStartingAnim:
+		
+		if self.position.y >= spawnInitPos.y:
+			self.position.y -= speedDefault * delta
+		else:
+			isStartingAnim = true
+			isWaitingForStart = true
+			self.show()	
+				
 					
 func _input(event):
 	
-	# fire
-	if event.is_action_pressed("FIRE") && event.is_echo() == false:
-		if GameState.allowNextShoot == true:
-			createLaser(self.position)
-			GameState.allowNextShoot = false
-		
-	# left-right animations	
-	if event.is_action_pressed("MOVE_LEFT") && event.is_echo() == false:	
-		AnimPlayer.set_current_animation("RatRunLeft")
-	if event.is_action_released("MOVE_LEFT"):
-		AnimPlayer.set_current_animation("RatRunStraight")
-		
-	if event.is_action_pressed("MOVE_RIGHT") && event.is_echo() == false:	
-		AnimPlayer.set_current_animation("RatRunRight")
-	if event.is_action_released("MOVE_RIGHT"):
-		AnimPlayer.set_current_animation("RatRunStraight")
+	if isWaitingForStart:
+		if event.is_action_pressed("FIRE") || event.is_action_pressed("MOVE_LEFT") || event.is_action_pressed("MOVE_RIGHT") || event.is_action_pressed("ACCELERATE") || event.is_action_pressed("BREAK"):
+			isRunStarted = true
+			isWaitingForStart = false
+			GameState.isActiveRun = true
+			AnimPlayer.play("RatRunStraight")
+	
+	if isRunStarted:
+		# fire
+		if event.is_action_pressed("FIRE") && event.is_echo() == false:
+			if GameState.allowNextShoot == true:
+				createLaser(self.position)
+				GameState.allowNextShoot = false
+			
+		# left-right animations	
+		if event.is_action_pressed("MOVE_LEFT") && event.is_echo() == false:	
+			AnimPlayer.set_current_animation("RatRunLeft")
+		if event.is_action_released("MOVE_LEFT"):
+			AnimPlayer.set_current_animation("RatRunStraight")
+			
+		if event.is_action_pressed("MOVE_RIGHT") && event.is_echo() == false:	
+			AnimPlayer.set_current_animation("RatRunRight")
+		if event.is_action_released("MOVE_RIGHT"):
+			AnimPlayer.set_current_animation("RatRunStraight")
 
 func move(delta):
 	
@@ -123,6 +150,10 @@ func _on_PlayerRat_body_exited(body):
 		isOnBridge = false
 		if overlaps_body(routeNode):
 			processDie()
+
+func _on_GameState_fuel_empty():
+	
+	processDie()
 	
 func processDie():
 	
