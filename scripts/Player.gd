@@ -164,7 +164,8 @@ func processDie():
 	isStartingAnim = false
 	GameState.isActiveRun = false
 	
-	AnimPlayer.play("RatDying")	
+	AnimPlayer.set_speed_scale(1)
+	AnimPlayer.play("RatDying")
 	
 	var timer = Timer.new()
 	timer.connect("timeout",self,"_on_dying_timeout")
