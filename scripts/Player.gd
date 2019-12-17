@@ -21,6 +21,9 @@ var isStartingAnim = true
 
 const laserMissle = preload("res://prefabs/PlayerLaserMissle.tscn")
 onready var AnimPlayer = get_node("RatAnimationPlayer")
+onready var AudioLaser = $LaserAudioStreamPlayer
+onready var AudioFueling = $FuelingAudioStreamPlayer
+onready var AudioDie = $DieAudioStreamPlayer
 
 func _ready():
 	
@@ -30,7 +33,7 @@ func _ready():
 	speedCurrent = speedDefault
 	bridgeNode = get_tree().get_root().find_node("RouteBridgesTileMap", true, false)
 	routeNode = get_tree().get_root().find_node("RouteTileMap", true, false)
-	AnimPlayer.stop()	
+	AnimPlayer.stop()
 	var _conn = GameState.connect("fuel_empty",self,"_on_GameState_fuel_empty")
 	
 func _process(delta):
@@ -116,6 +119,7 @@ func createLaser(pos):
 	var laser = laserMissle.instance()
 	laser.set_position(spawnPos)
 	get_tree().get_root().find_node("PlayerLaserMissles",true,false).add_child(laser)
+	AudioLaser.play()
 
 # collisions
 
@@ -129,11 +133,13 @@ func _on_PlayerRat_area_entered(area):
 		
 	if area.is_in_group("fuel"):
 		isRefueling = true
+		AudioFueling.play()
 
 func _on_PlayerRat_area_exited(area):
 	
 	if area.is_in_group("fuel"):
 		isRefueling = false
+		AudioFueling.stop()
 		
 func _on_PlayerRat_body_entered(body):
 	
@@ -158,6 +164,7 @@ func _on_GameState_fuel_empty():
 func processDie():
 	
 	isDyingState = true
+	AudioDie.play()
 	
 	isRunStarted = false
 	isWaitingForStart = false

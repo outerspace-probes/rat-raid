@@ -2,7 +2,6 @@ extends Node2D
 
 func _ready():
 	
-	print("exploinstances")
 	get_node("Particles2D").emitting = true
 	
 	var timer = Timer.new()

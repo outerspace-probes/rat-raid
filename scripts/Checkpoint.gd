@@ -4,6 +4,7 @@ export var rewardPoints = 589
 
 const exploPrefab = preload("res://prefabs/CheckpointExplo.tscn")
 onready var GameWorld = get_node("/root/GameWorld")
+onready var AudioExplo = $"/root/GameWorld/GlobalAudio/ExploAudioStreamPlayer"
 
 func _ready():
 	
@@ -18,6 +19,7 @@ func _on_Checkpoint_area_entered(area):
 		
 func destroy():
 	
+	AudioExplo.play()
 	var explo = exploPrefab.instance()
 	explo.set_position(self.position)
 	GameWorld.add_child(explo)	

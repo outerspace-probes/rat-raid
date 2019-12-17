@@ -2,8 +2,8 @@ extends Node
 
 # state vars
 
-export var healthDecreaseSpeed = 30
-export var playerLifes = 4
+export var healthDecreaseSpeed = 50
+export var playerLifes = 3
 
 var playerHealth = 100
 var scorePoints = 0
