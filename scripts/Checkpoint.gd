@@ -1,5 +1,7 @@
 extends Area2D
 
+export var rewardPoints = 589
+
 const exploPrefab = preload("res://prefabs/CheckpointExplo.tscn")
 onready var GameWorld = get_node("/root/GameWorld")
 
@@ -12,6 +14,7 @@ func _on_Checkpoint_area_entered(area):
 	if area.is_in_group("playermissles"):
 		
 		GameState.checkpointHit(self)
+		GameState.addScorePoints(rewardPoints)
 		
 func destroy():
 	
