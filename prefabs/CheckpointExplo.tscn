@@ -7,14 +7,14 @@
 script = ExtResource( 1 )
 
 [node name="Explosion" parent="." instance=ExtResource( 2 )]
-position = Vector2( -153.957, 15.1625 )
+position = Vector2( -150.088, 10.5198 )
 
 [node name="Explosion2" parent="." instance=ExtResource( 2 )]
-position = Vector2( -58.3172, -18.6615 )
+position = Vector2( -54.4483, 3.00421 )
 scale = Vector2( 1.4, 1.4 )
 
 [node name="Explosion3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 66.141, 21.8712 )
+position = Vector2( 57.6295, 12.5859 )
 scale = Vector2( 1.2, 1.2 )
 
 [node name="Explosion4" parent="." instance=ExtResource( 2 )]
