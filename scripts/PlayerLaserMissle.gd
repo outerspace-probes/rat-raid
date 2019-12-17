@@ -31,8 +31,10 @@ func _on_PlayerLaserMissle_area_entered(area):
 	
 	if area.is_in_group("enemies"):
 		destroy()
-	if area.is_in_group("fuel"):
+	elif area.is_in_group("fuel"):
 		destroy()
+	elif area.is_in_group("checkpoint"):
+		destroy()	
 		
 func destroy():
 	GameState.allowNextShoot = true

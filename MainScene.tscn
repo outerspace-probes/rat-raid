@@ -154,7 +154,7 @@ script = ExtResource( 1 )
 
 [node name="UIbox" type="Node2D" parent="MainCamera2D"]
 position = Vector2( 0, 430 )
-z_index = 99
+z_index = 4096
 
 [node name="BgPolygon2D" type="Polygon2D" parent="MainCamera2D/UIbox"]
 position = Vector2( -74.1636, 0 )

@@ -7,7 +7,10 @@ var moveSpeed = 250
 var direction = "left"
 var isWaiting = true
 
+const exploPrefab = preload("res://prefabs/Explosion.tscn")
+
 onready var Sprite = get_node("Sprite")
+onready var GameWorld = get_node("/root/GameWorld")
 
 func _ready():
 	add_to_group("enemies")
@@ -58,4 +61,7 @@ func move(delta):
 	
 func processDie():
 	GameState.addScorePoints(rewardPoints)
+	var explo = exploPrefab.instance()
+	explo.set_position(self.position)
+	GameWorld.add_child(explo)
 	queue_free()
