@@ -2,8 +2,8 @@ extends Area2D
 
 export var rewardPoints = 278
 export var isFlyingEnemy = false
+export var moveSpeed = 250
 
-var moveSpeed = 250
 var direction = "left"
 var isWaiting = true
 
