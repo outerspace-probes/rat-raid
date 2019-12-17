@@ -143,6 +143,7 @@ tracks/0/keys = {
 [node name="GameWorld" type="Node"]
 
 [node name="MainCamera2D" type="Camera2D" parent="."]
+editor/display_folded = true
 position = Vector2( 990, -300 )
 current = true
 smoothing_speed = 1.0
@@ -363,9 +364,9 @@ position = Vector2( 754.817, -20888.6 )
 position = Vector2( 1120.52, -21715.5 )
 
 [node name="Enemies" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="LandType1" type="Node" parent="Enemies"]
+editor/display_folded = true
 
 [node name="EnemyOne" parent="Enemies/LandType1" instance=ExtResource( 15 )]
 position = Vector2( 591.223, -735.39 )
@@ -524,14 +525,6 @@ anims/RatRunStraight = SubResource( 12 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerRat"]
 position = Vector2( -866.021, -1006.89 )
 polygon = PoolVector2Array( 856.487, 1038.02, 849.436, 1022.6, 850.628, 1011.08, 856.128, 989.621, 847.033, 978.635, 864.242, 953.292, 870.666, 953.584, 886.229, 979.792, 875.845, 989.621, 883.199, 1010.68, 883.199, 1027.36, 876.844, 1035.31, 866.119, 1043.65 )
-
-[node name="Placeholder" type="Polygon2D" parent="PlayerRat"]
-visible = false
-position = Vector2( -0.530945, -6.92346 )
-scale = Vector2( 1.20047, 1.20047 )
-color = Color( 0, 0, 0, 1 )
-antialiased = true
-polygon = PoolVector2Array( 8, -8, 8, -8, 10.1371, -3.72572, 15.3726, -3.54041, 12.7466, 1.49323, 16, 8, 16, 16, 8, 32, 0.437988, 36.3413, -0.238403, 64.8845, -1.59113, 59.3381, -2.67334, 35.9354, -8.08435, 31.8772, -10.553, 27.2163, -13.6998, 21.4471, -16, 16, -16, 8, -13.3664, 2.73278, -15.5807, -3.91382, -10.4293, -3.14132, -8, -8, -16, -16, -16, -24, -10.8141, -29.1859, -5.06602, -29.066, 0, -24, 4.68994, -29.3178, 10.5151, -29.3178, 15.7272, -24.2591, 16, -16 )
 
 [node name="PlayerLaserMissles" type="Node2D" parent="."]
 [connection signal="area_entered" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_area_entered"]
