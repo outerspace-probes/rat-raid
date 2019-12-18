@@ -292,10 +292,16 @@ format = 1
 [node name="FuelItem" parent="Fuel/Level1" instance=ExtResource( 14 )]
 position = Vector2( 994.346, -554.326 )
 
+[node name="FuelItem2" parent="Fuel/Level1" instance=ExtResource( 14 )]
+position = Vector2( 994.346, -554.326 )
+
 [node name="Level2" type="Node" parent="Fuel"]
 editor/display_folded = true
 
 [node name="FuelItem" parent="Fuel/Level2" instance=ExtResource( 14 )]
+position = Vector2( 1021.51, -8810.32 )
+
+[node name="FuelItem2" parent="Fuel/Level2" instance=ExtResource( 14 )]
 position = Vector2( 1021.51, -8810.32 )
 
 [node name="Level3" type="Node" parent="Fuel"]
