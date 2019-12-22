@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://scripts/MainCamera2D.gd" type="Script" id=1]
 [ext_resource path="res://images/ui/healthbar/bg.png" type="Texture" id=2]
@@ -15,16 +15,18 @@
 [ext_resource path="res://tilesets/TilesetRouteBridges.tres" type="TileSet" id=13]
 [ext_resource path="res://tilesets/TilesetDecos.tres" type="TileSet" id=14]
 [ext_resource path="res://prefabs/FuelItem.tscn" type="PackedScene" id=15]
-[ext_resource path="res://prefabs/EnemyLand2.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scripts/CheckpointGates.gd" type="Script" id=17]
-[ext_resource path="res://prefabs/Checkpoint.tscn" type="PackedScene" id=18]
-[ext_resource path="res://scripts/Player.gd" type="Script" id=19]
-[ext_resource path="res://images/RatSprite.png" type="Texture" id=20]
-[ext_resource path="res://sounds/laser_missle.wav" type="AudioStream" id=21]
-[ext_resource path="res://sounds/fueling.wav" type="AudioStream" id=22]
-[ext_resource path="res://sounds/player_die.wav" type="AudioStream" id=23]
-[ext_resource path="res://sounds/main_ambient_loop.wav" type="AudioStream" id=24]
-[ext_resource path="res://sounds/explosion.wav" type="AudioStream" id=25]
+[ext_resource path="res://prefabs/EnemyLand1.tscn" type="PackedScene" id=16]
+[ext_resource path="res://prefabs/EnemyLand2.tscn" type="PackedScene" id=17]
+[ext_resource path="res://prefabs/EnemyFlying1.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scripts/CheckpointGates.gd" type="Script" id=19]
+[ext_resource path="res://prefabs/Checkpoint.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=21]
+[ext_resource path="res://images/RatSprite.png" type="Texture" id=22]
+[ext_resource path="res://sounds/laser_missle.wav" type="AudioStream" id=23]
+[ext_resource path="res://sounds/fueling.wav" type="AudioStream" id=24]
+[ext_resource path="res://sounds/player_die.wav" type="AudioStream" id=25]
+[ext_resource path="res://sounds/main_ambient_loop.wav" type="AudioStream" id=26]
+[ext_resource path="res://sounds/explosion.wav" type="AudioStream" id=27]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/Kenney Pixel Square.ttf"
@@ -164,6 +166,7 @@ tracks/0/keys = {
 [node name="GameWorld" type="Node"]
 
 [node name="MainCamera2D" type="Camera2D" parent="."]
+editor/display_folded = true
 position = Vector2( 990, -300 )
 current = true
 smoothing_speed = 1.0
@@ -284,6 +287,7 @@ z_index = 9
 shape = SubResource( 8 )
 
 [node name="FlashFXPolygon2D" type="Polygon2D" parent="MainCamera2D"]
+editor/display_folded = true
 scale = Vector2( 1.1885, 1.1885 )
 z_index = 999
 color = Color( 1, 1, 1, 0 )
@@ -318,11 +322,13 @@ format = 1
 position = Vector2( 1014.7, -876.333 )
 
 [node name="Level2" type="Node" parent="Fuel"]
+editor/display_folded = true
 
 [node name="FuelItem" parent="Fuel/Level2" instance=ExtResource( 15 )]
 position = Vector2( 1021.51, -8810.32 )
 
 [node name="Level3" type="Node" parent="Fuel"]
+editor/display_folded = true
 
 [node name="FuelItem" parent="Fuel/Level3" instance=ExtResource( 15 )]
 position = Vector2( 977.102, -19514.1 )
@@ -333,48 +339,76 @@ position = Vector2( 977.102, -19514.1 )
 
 [node name="LandType1" type="Node" parent="Enemies/Level1"]
 
+[node name="EnemyLandOne" parent="Enemies/Level1/LandType1" instance=ExtResource( 16 )]
+position = Vector2( 932.693, -437.226 )
+
 [node name="LandType2" type="Node" parent="Enemies/Level1"]
 
-[node name="EnemyOne" parent="Enemies/Level1/LandType2" instance=ExtResource( 16 )]
-position = Vector2( 1093.52, -566.948 )
-
-[node name="EnemyOne2" parent="Enemies/Level1/LandType2" instance=ExtResource( 16 )]
-position = Vector2( 926.681, -1291.61 )
-startFromLeft = true
-disableMoving = true
-
-[node name="EnemyOne3" parent="Enemies/Level1/LandType2" instance=ExtResource( 16 )]
-position = Vector2( 1001.63, -1864.56 )
-disableMoving = true
-
-[node name="EnemyOne4" parent="Enemies/Level1/LandType2" instance=ExtResource( 16 )]
-position = Vector2( 982.11, -2167.14 )
-startFromLeft = true
+[node name="EnemyLandTwo" parent="Enemies/Level1/LandType2" instance=ExtResource( 17 )]
+position = Vector2( 1026.39, -679.166 )
 
 [node name="Flying" type="Node" parent="Enemies/Level1"]
 
+[node name="EnemyFlyingOne" parent="Enemies/Level1/Flying" instance=ExtResource( 18 )]
+position = Vector2( 1929.51, -1209.01 )
+
+[node name="Level2" type="Node" parent="Enemies"]
+editor/display_folded = true
+
+[node name="LandType1" type="Node" parent="Enemies/Level2"]
+
+[node name="EnemyLandOne" parent="Enemies/Level2/LandType1" instance=ExtResource( 16 )]
+position = Vector2( 870.635, -8946.83 )
+
+[node name="LandType2" type="Node" parent="Enemies/Level2"]
+
+[node name="EnemyLandTwo" parent="Enemies/Level2/LandType2" instance=ExtResource( 17 )]
+position = Vector2( 964.337, -9188.78 )
+
+[node name="Flying" type="Node" parent="Enemies/Level2"]
+
+[node name="EnemyFlyingOne" parent="Enemies/Level2/Flying" instance=ExtResource( 18 )]
+position = Vector2( 1867.45, -9718.62 )
+
+[node name="Level3" type="Node" parent="Enemies"]
+editor/display_folded = true
+
+[node name="LandType1" type="Node" parent="Enemies/Level3"]
+
+[node name="EnemyLandOne" parent="Enemies/Level3/LandType1" instance=ExtResource( 16 )]
+position = Vector2( 897.521, -19698.8 )
+
+[node name="LandType2" type="Node" parent="Enemies/Level3"]
+
+[node name="EnemyLandTwo" parent="Enemies/Level3/LandType2" instance=ExtResource( 17 )]
+position = Vector2( 991.223, -19940.8 )
+
+[node name="Flying" type="Node" parent="Enemies/Level3"]
+
+[node name="EnemyFlyingOne" parent="Enemies/Level3/Flying" instance=ExtResource( 18 )]
+position = Vector2( 1894.34, -20470.6 )
+
 [node name="CheckpointGates" type="Node" parent="."]
-script = ExtResource( 17 )
-
-[node name="Checkpoint1" parent="CheckpointGates" instance=ExtResource( 18 )]
-position = Vector2( 994.411, -8473.22 )
-
-[node name="Checkpoint2" parent="CheckpointGates" instance=ExtResource( 18 )]
-position = Vector2( 990.691, -19193.4 )
-
-[node name="Checkpoint3" parent="CheckpointGates" instance=ExtResource( 18 )]
-position = Vector2( 992.39, -29885.4 )
-
-[node name="CheckpointTest" parent="CheckpointGates" instance=ExtResource( 18 )]
-position = Vector2( 990.197, -2837.16 )
-
-[node name="PlayerRat" type="Area2D" parent="."]
-position = Vector2( 990, 0 )
-z_index = 99
+editor/display_folded = true
 script = ExtResource( 19 )
 
+[node name="Checkpoint1" parent="CheckpointGates" instance=ExtResource( 20 )]
+position = Vector2( 994.411, -8473.22 )
+
+[node name="Checkpoint2" parent="CheckpointGates" instance=ExtResource( 20 )]
+position = Vector2( 990.691, -19193.4 )
+
+[node name="Checkpoint3" parent="CheckpointGates" instance=ExtResource( 20 )]
+position = Vector2( 992.39, -29885.4 )
+
+[node name="PlayerRat" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 990, 0 )
+z_index = 99
+script = ExtResource( 21 )
+
 [node name="Sprite" type="Sprite" parent="PlayerRat"]
-texture = ExtResource( 20 )
+texture = ExtResource( 22 )
 hframes = 7
 frame = 1
 
@@ -389,15 +423,15 @@ position = Vector2( -866.021, -1006.89 )
 polygon = PoolVector2Array( 856.487, 1038.02, 849.436, 1022.6, 850.628, 1011.08, 856.128, 989.621, 847.033, 978.635, 864.242, 953.292, 870.666, 953.584, 886.229, 979.792, 875.845, 989.621, 883.199, 1010.68, 883.199, 1027.36, 876.844, 1035.31, 866.119, 1043.65 )
 
 [node name="LaserAudioStreamPlayer" type="AudioStreamPlayer" parent="PlayerRat"]
-stream = ExtResource( 21 )
+stream = ExtResource( 23 )
 volume_db = -13.157
 
 [node name="FuelingAudioStreamPlayer" type="AudioStreamPlayer" parent="PlayerRat"]
-stream = ExtResource( 22 )
+stream = ExtResource( 24 )
 volume_db = -24.917
 
 [node name="DieAudioStreamPlayer" type="AudioStreamPlayer" parent="PlayerRat"]
-stream = ExtResource( 23 )
+stream = ExtResource( 25 )
 volume_db = -6.265
 bus = "Die"
 
@@ -407,12 +441,12 @@ bus = "Die"
 editor/display_folded = true
 
 [node name="MainLoopAudioStreamPlayer" type="AudioStreamPlayer" parent="GlobalAudio"]
-stream = ExtResource( 24 )
+stream = ExtResource( 26 )
 autoplay = true
 bus = "Ambient"
 
 [node name="ExploAudioStreamPlayer" type="AudioStreamPlayer" parent="GlobalAudio"]
-stream = ExtResource( 25 )
+stream = ExtResource( 27 )
 volume_db = -7.518
 bus = "Explo"
 [connection signal="area_entered" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_area_entered"]

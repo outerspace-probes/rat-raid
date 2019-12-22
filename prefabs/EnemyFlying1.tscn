@@ -20,7 +20,7 @@ tracks/0/keys = {
 "values": [ 2, 3 ]
 }
 
-[node name="EnemyTwo" type="Area2D"]
+[node name="EnemyFlyingOne" type="Area2D"]
 script = ExtResource( 1 )
 rewardPoints = 478
 isFlyingEnemy = true
