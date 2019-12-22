@@ -389,7 +389,6 @@ position = Vector2( 991.223, -19940.8 )
 position = Vector2( 1894.34, -20470.6 )
 
 [node name="CheckpointGates" type="Node" parent="."]
-editor/display_folded = true
 script = ExtResource( 19 )
 
 [node name="Checkpoint1" parent="CheckpointGates" instance=ExtResource( 20 )]
