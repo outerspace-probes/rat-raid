@@ -1,8 +1,10 @@
 extends Area2D
 
 export var rewardPoints = 278
-export var isFlyingEnemy = false
 export var moveSpeed = 250
+export var startFromLeft = false
+export var disableMoving = false
+export var isFlyingEnemy = false
 
 var direction = "left"
 var isWaiting = true
@@ -15,10 +17,13 @@ onready var AudioExplo = $"/root/GameWorld/GlobalAudio/ExploAudioStreamPlayer"
 
 func _ready():
 	add_to_group("enemies")
+	if startFromLeft:
+		direction = "right"
+		Sprite.flip_h = true
 
 func _process(delta):
 	
-	if !isWaiting:
+	if !isWaiting && !disableMoving:
 		move(delta)
 		
 func _on_EnemyOne_area_entered(area):

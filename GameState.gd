@@ -23,6 +23,7 @@ signal score_changed
 signal lifes_changed
 signal fuel_empty
 signal game_over
+signal checkpoint_destroyed
 
 func _ready():
 	
@@ -85,8 +86,9 @@ func checkpointHit(checkpointObj):
 
 	checkpointReached += 1
 	playerSpawnPos = checkpointObj.position
+	emit_signal("checkpoint_destroyed")
 	checkpointObj.destroy()
-
+	
 func playerRefuel(fuelAmt):
 	
 	if playerHealth < 100:
