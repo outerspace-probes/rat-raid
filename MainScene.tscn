@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 [gd_scene load_steps=41 format=2]
 
 <<<<<<< HEAD
+=======
+[gd_scene load_steps=33 format=2]
+
+>>>>>>> b1316e7baaad007f0dea0b5bf4ac1e860f2a9c4d
 [ext_resource path="res://tilesets/TilesetRoute.tres" type="TileSet" id=1]
 [ext_resource path="res://tilesets/TilesetRouteBridges.tres" type="TileSet" id=2]
 [ext_resource path="res://tilesets/TilesetDecos.tres" type="TileSet" id=3]
@@ -21,6 +26,7 @@
 [ext_resource path="res://images/ui/score-display/icon.png" type="Texture" id=18]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=19]
 [ext_resource path="res://images/RatSprite.png" type="Texture" id=20]
+<<<<<<< HEAD
 =======
 [ext_resource path="res://scripts/MainCamera2D.gd" type="Script" id=1]
 [ext_resource path="res://images/ui/healthbar/bg.png" type="Texture" id=2]
@@ -50,6 +56,8 @@
 [ext_resource path="res://sounds/main_ambient_loop.wav" type="AudioStream" id=26]
 [ext_resource path="res://sounds/explosion.wav" type="AudioStream" id=27]
 >>>>>>> 208f539457b877f40edd637116cbad42cbe2a1aa
+=======
+>>>>>>> b1316e7baaad007f0dea0b5bf4ac1e860f2a9c4d
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/Kenney Pixel Square.ttf"
@@ -388,6 +396,7 @@ z_index = 9
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCamera2D/EnemyStartMoveTriggers2/FlyingEnemyTrigger"]
 shape = SubResource( 8 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 [node name="PlayerRat" type="Area2D" parent="."]
 position = Vector2( 997.766, 0 )
@@ -512,6 +521,12 @@ position = Vector2( 992.39, -29885.4 )
 editor/display_folded = true
 position = Vector2( 990, 0 )
 >>>>>>> 208f539457b877f40edd637116cbad42cbe2a1aa
+=======
+
+[node name="PlayerRat" type="Area2D" parent="."]
+position = Vector2( 997.766, 0 )
+scale = Vector2( 1.25, 1.25 )
+>>>>>>> b1316e7baaad007f0dea0b5bf4ac1e860f2a9c4d
 z_index = 99
 script = ExtResource( 21 )
 
@@ -538,6 +553,7 @@ scale = Vector2( 1.20047, 1.20047 )
 color = Color( 0, 0, 0, 1 )
 antialiased = true
 polygon = PoolVector2Array( 8, -8, 8, -8, 10.1371, -3.72572, 15.3726, -3.54041, 12.7466, 1.49323, 16, 8, 16, 16, 8, 32, 0.437988, 36.3413, -0.238403, 64.8845, -1.59113, 59.3381, -2.67334, 35.9354, -8.08435, 31.8772, -10.553, 27.2163, -13.6998, 21.4471, -16, 16, -16, 8, -13.3664, 2.73278, -15.5807, -3.91382, -10.4293, -3.14132, -8, -8, -16, -16, -16, -24, -10.8141, -29.1859, -5.06602, -29.066, 0, -24, 4.68994, -29.3178, 10.5151, -29.3178, 15.7272, -24.2591, 16, -16 )
+<<<<<<< HEAD
 =======
 [node name="LaserAudioStreamPlayer" type="AudioStreamPlayer" parent="PlayerRat"]
 stream = ExtResource( 23 )
@@ -567,6 +583,8 @@ stream = ExtResource( 27 )
 volume_db = -7.518
 bus = "Explo"
 >>>>>>> 208f539457b877f40edd637116cbad42cbe2a1aa
+=======
+>>>>>>> b1316e7baaad007f0dea0b5bf4ac1e860f2a9c4d
 [connection signal="area_entered" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_area_entered"]
 [connection signal="area_exited" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_area_exited"]
 [connection signal="body_entered" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_body_entered"]
