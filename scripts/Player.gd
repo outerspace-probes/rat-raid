@@ -53,7 +53,7 @@ func _process(delta):
 		if self.position.y >= spawnInitPos.y:
 			self.position.y -= speedDefault * delta
 		else:
-			isStartingAnim = true
+			isStartingAnim = false
 			isWaitingForStart = true
 			self.show()
 			Collider.set_disabled(false)
