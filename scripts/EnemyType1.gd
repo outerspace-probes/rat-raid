@@ -81,7 +81,7 @@ func processDie():
 func _on_VisibilityNotifier2D_viewport_exited(_viewport):
 	
 	if isFlyingEnemy:
-		print("vp exited")
+
 		if direction == "left":
 			self.position.x = viewportWidth
 		else:

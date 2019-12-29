@@ -2,7 +2,7 @@ extends Node
 
 # state vars
 
-export var healthDecreaseSpeed = 50
+export var healthDecreaseSpeed = 15
 export var playerLifes = 3
 export var checkpointReached = 0
 
@@ -18,6 +18,7 @@ var playerSpawnPos = Vector2(990,0)
 var initSpawnPos = playerSpawnPos
 
 onready var main_scene = preload("res://MainScene.tscn")
+onready var PlayerRat = $'/root/GameWorld/PlayerRat'
 
 signal score_changed
 signal lifes_changed
@@ -110,7 +111,9 @@ func getLifesNum():
 func decreasePlayerHealth(delta):
 	
 	if playerHealth > -1:
-		playerHealth -= healthDecreaseSpeed * delta / 10
+		var playerSpeedFactor = PlayerRat.speedCurrent / 400
+		var decreaseAmt = healthDecreaseSpeed * delta / 10
+		playerHealth -= decreaseAmt + decreaseAmt * playerSpeedFactor
 	
 func getPlayerHealth():
 	
