@@ -24,10 +24,12 @@ onready var AnimPlayer = get_node("RatAnimationPlayer")
 onready var AudioLaser = $LaserAudioStreamPlayer
 onready var AudioFueling = $FuelingAudioStreamPlayer
 onready var AudioDie = $DieAudioStreamPlayer
+onready var Collider = $CollisionPolygon2D
 
 func _ready():
 	
 	self.hide()
+	Collider.set_disabled(true)
 	spawnInitPos = GameState.getPlayerSpawnPos()
 	self.position = Vector2(spawnInitPos.x, spawnInitPos.y + startAnimOffset)
 	speedCurrent = speedDefault
@@ -53,7 +55,8 @@ func _process(delta):
 		else:
 			isStartingAnim = true
 			isWaitingForStart = true
-			self.show()	
+			self.show()
+			Collider.set_disabled(false)
 										
 func _input(event):
 		
