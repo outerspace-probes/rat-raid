@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MAIN_AMBIENT_LOOP_V3.wav-9c6f3edce4c6458e5821ae6f8dd649ca.sample"
+
+[deps]
+
+source_file="res://sounds/MAIN_AMBIENT_LOOP_V3.wav"
+dest_files=[ "res://.import/MAIN_AMBIENT_LOOP_V3.wav-9c6f3edce4c6458e5821ae6f8dd649ca.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
