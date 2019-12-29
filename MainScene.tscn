@@ -267,6 +267,7 @@ text = "0"
 align = 2
 
 [node name="EnemyStartMoveTriggers2" type="Node2D" parent="MainCamera2D"]
+visible = false
 
 [node name="LandEnemyTrigger" type="Area2D" parent="MainCamera2D/EnemyStartMoveTriggers2"]
 position = Vector2( 19.1927, -216.783 )
