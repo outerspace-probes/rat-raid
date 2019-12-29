@@ -502,9 +502,9 @@ position = Vector2( 1021.51, -8810.32 )
 editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Enemies"]
+editor/display_folded = true
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level1"]
-editor/display_folded = true
 
 [node name="EnemyLandOne" parent="Enemies/Level1/LandType1" instance=ExtResource( 16 )]
 position = Vector2( 971.626, -1308.28 )
@@ -588,6 +588,7 @@ moveSpeed = 0
 [node name="Flying" type="Node2D" parent="Enemies/Level1"]
 
 [node name="Level2" type="Node2D" parent="Enemies"]
+editor/display_folded = true
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level2"]
 
@@ -758,6 +759,7 @@ position = Vector2( 990.691, -40688.6 )
 position = Vector2( 990.691, -51437.2 )
 
 [node name="PlayerRat" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 990, 0 )
 scale = Vector2( 2, 2 )
 z_index = 99
