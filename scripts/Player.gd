@@ -35,7 +35,7 @@ func _ready():
 	routeNode = get_tree().get_root().find_node("RouteTileMap", true, false)
 	AnimPlayer.stop()
 	var _conn = GameState.connect("fuel_empty",self,"_on_GameState_fuel_empty")
-	
+		
 func _process(delta):
 	
 	if isRunStarted:

@@ -23,6 +23,7 @@ tracks/0/keys = {
 [node name="EnemyFlyingOne" type="Area2D"]
 script = ExtResource( 1 )
 rewardPoints = 478
+moveSpeed = 550
 isFlyingEnemy = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -35,5 +36,9 @@ polygon = PoolVector2Array( -40.4986, -6.11699, -35.3221, -32.9701, -12.9984, -4
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "EnemyMove"
 anims/EnemyMove = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( 4.91644, 4.91644 )
 [connection signal="area_entered" from="." to="." method="_on_EnemyOne_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_EnemyOne_body_entered"]
+[connection signal="viewport_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_viewport_exited"]
