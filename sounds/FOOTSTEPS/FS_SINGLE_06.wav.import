@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/FS_SINGLE_06.wav-6325ab0c926733b279b0a1d44e3c0981.sample"
+
+[deps]
+
+source_file="res://sounds/FOOTSTEPS/FS_SINGLE_06.wav"
+dest_files=[ "res://.import/FS_SINGLE_06.wav-6325ab0c926733b279b0a1d44e3c0981.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

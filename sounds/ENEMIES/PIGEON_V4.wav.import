@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/FUELING_V1.wav-df5a12184ad42f4299fdf3c530071ddc.sample"
+path="res://.import/PIGEON_V4.wav-9776f48a6b79e8cd9b897b928a459abb.sample"
 
 [deps]
 
-source_file="res://sounds/FUELING_V1.wav"
-dest_files=[ "res://.import/FUELING_V1.wav-df5a12184ad42f4299fdf3c530071ddc.sample" ]
+source_file="res://sounds/ENEMIES/PIGEON_V4.wav"
+dest_files=[ "res://.import/PIGEON_V4.wav-9776f48a6b79e8cd9b897b928a459abb.sample" ]
 
 [params]
 
