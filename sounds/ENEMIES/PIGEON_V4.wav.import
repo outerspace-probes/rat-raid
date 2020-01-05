@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PIGEON_V4.wav-9776f48a6b79e8cd9b897b928a459abb.sample"
+
+[deps]
+
+source_file="res://sounds/ENEMIES/PIGEON_V4.wav"
+dest_files=[ "res://.import/PIGEON_V4.wav-9776f48a6b79e8cd9b897b928a459abb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
