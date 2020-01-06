@@ -297,7 +297,6 @@ script = ExtResource( 11 )
 anims/Flash = SubResource( 9 )
 
 [node name="Terrain" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Terrain"]
 editor/display_folded = true
@@ -591,6 +590,7 @@ scale = Vector2( 1.4, 1.5 )
 rewardPoints = 80
 
 [node name="Enemies" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Enemies"]
 editor/display_folded = true
@@ -784,6 +784,7 @@ moveSpeed = 450
 [node name="Flying" type="Node2D" parent="Enemies/Level2"]
 
 [node name="Level3" type="Node2D" parent="Enemies"]
+editor/display_folded = true
 position = Vector2( 0, -10761.6 )
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level3"]
@@ -901,6 +902,7 @@ rewardPoints = 100
 moveSpeed = 850
 
 [node name="Level4" type="Node2D" parent="Enemies"]
+editor/display_folded = true
 position = Vector2( 0, -21495.2 )
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level4"]
