@@ -2,7 +2,6 @@
 
 [ext_resource path="res://images/RatRaidTileset.png" type="Texture" id=1]
 
-
 [resource]
 0/name = "Tree"
 0/texture = ExtResource( 1 )
@@ -14,7 +13,7 @@
 0/navigation_offset = Vector2( 0, 0 )
 0/shapes = [  ]
 0/z_index = 0
-1/name = "Palm1"
+1/name = "Pipes1"
 1/texture = ExtResource( 1 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
@@ -24,7 +23,7 @@
 1/navigation_offset = Vector2( 0, 0 )
 1/shapes = [  ]
 1/z_index = 0
-2/name = "Palm2"
+2/name = "Pipes2"
 2/texture = ExtResource( 1 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
