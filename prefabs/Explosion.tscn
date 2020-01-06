@@ -27,11 +27,13 @@ anim_speed = 0.8
 
 [node name="Explosion" type="Node2D"]
 z_index = 999
+z_as_relative = false
 script = ExtResource( 1 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 modulate = Color( 1, 1, 1, 0.721569 )
 material = SubResource( 1 )
+z_index = 999
 emitting = false
 amount = 6
 lifetime = 1.5

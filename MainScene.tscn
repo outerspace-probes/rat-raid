@@ -165,6 +165,7 @@ tracks/0/keys = {
 [node name="GameWorld" type="Node"]
 
 [node name="MainCamera2D" type="Camera2D" parent="."]
+editor/display_folded = true
 position = Vector2( 990, -300 )
 current = true
 smoothing_speed = 1.0
@@ -286,7 +287,6 @@ shape = SubResource( 8 )
 
 [node name="FlashFXPolygon2D" type="Polygon2D" parent="MainCamera2D"]
 editor/display_folded = true
-visible = false
 scale = Vector2( 1.1885, 1.1885 )
 z_index = 999
 color = Color( 1, 1, 1, 0 )
@@ -297,6 +297,7 @@ script = ExtResource( 11 )
 anims/Flash = SubResource( 9 )
 
 [node name="Terrain" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Terrain"]
 editor/display_folded = true
@@ -317,6 +318,7 @@ cell_size = Vector2( 32, 32 )
 format = 1
 
 [node name="Level2" type="Node2D" parent="Terrain"]
+editor/display_folded = true
 
 [node name="RouteTileMap" type="TileMap" parent="Terrain/Level2"]
 tile_set = ExtResource( 12 )
@@ -334,6 +336,7 @@ cell_size = Vector2( 32, 32 )
 format = 1
 
 [node name="Level3" type="Node2D" parent="Terrain"]
+editor/display_folded = true
 position = Vector2( 0, -10761.6 )
 
 [node name="RouteTileMap" type="TileMap" parent="Terrain/Level3"]
@@ -389,6 +392,7 @@ cell_size = Vector2( 32, 32 )
 format = 1
 
 [node name="Fuel" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Fuel"]
 editor/display_folded = true
@@ -589,6 +593,7 @@ rewardPoints = 80
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Level1" type="Node2D" parent="Enemies"]
+editor/display_folded = true
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level1"]
 
@@ -899,7 +904,6 @@ moveSpeed = 850
 position = Vector2( 0, -21495.2 )
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level4"]
-editor/display_folded = true
 
 [node name="EnemyLandOne" parent="Enemies/Level4/LandType1" instance=ExtResource( 16 )]
 position = Vector2( 1354.75, -10474 )
@@ -913,7 +917,6 @@ moveSpeed = 450
 startFromLeft = true
 
 [node name="LandType2" type="Node2D" parent="Enemies/Level4"]
-editor/display_folded = true
 
 [node name="EnemyLandTwo" parent="Enemies/Level4/LandType2" instance=ExtResource( 17 )]
 position = Vector2( 1266.36, -9966.31 )
@@ -1115,6 +1118,7 @@ rewardPoints = 100
 moveSpeed = 850
 
 [node name="CheckpointGates" type="Node" parent="."]
+editor/display_folded = true
 script = ExtResource( 19 )
 
 [node name="Checkpoint1" parent="CheckpointGates" instance=ExtResource( 20 )]
@@ -1138,6 +1142,7 @@ position = Vector2( 990.691, -51437.2 )
 rewardPoints = 500
 
 [node name="PlayerRat" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 990, 0 )
 scale = Vector2( 2, 2 )
 z_index = 99
@@ -1179,6 +1184,7 @@ bus = "Die"
 [node name="PlayerLaserMissles" type="Node2D" parent="."]
 
 [node name="GlobalAudio" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="MainLoopAudioStreamPlayer" type="AudioStreamPlayer" parent="GlobalAudio"]
 stream = ExtResource( 26 )

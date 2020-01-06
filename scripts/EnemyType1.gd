@@ -73,7 +73,7 @@ func processDie():
 	AudioExplo.play()
 	GameState.addScorePoints(rewardPoints)
 	var explo = exploPrefab.instance()
-	explo.set_position(self.position)
+	explo.set_position(get_global_transform().get_origin())
 	GameWorld.add_child(explo)
 	queue_free()
 
