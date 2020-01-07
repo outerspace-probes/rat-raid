@@ -279,7 +279,7 @@ z_index = 9
 shape = SubResource( 8 )
 
 [node name="FlyingEnemyTrigger" type="Area2D" parent="MainCamera2D/EnemyStartMoveTriggers2"]
-position = Vector2( 19.1927, -268.327 )
+position = Vector2( 30.5526, -789.91 )
 z_index = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCamera2D/EnemyStartMoveTriggers2/FlyingEnemyTrigger"]
