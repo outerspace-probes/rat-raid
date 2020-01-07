@@ -299,7 +299,6 @@ anims/Flash = SubResource( 9 )
 [node name="Terrain" type="Node" parent="."]
 
 [node name="Level1" type="Node2D" parent="Terrain"]
-editor/display_folded = true
 
 [node name="RouteTileMap" type="TileMap" parent="Terrain/Level1"]
 tile_set = ExtResource( 12 )
@@ -354,6 +353,7 @@ cell_size = Vector2( 32, 32 )
 format = 1
 
 [node name="Level4" type="Node2D" parent="Terrain"]
+editor/display_folded = true
 position = Vector2( 0, -21495.2 )
 
 [node name="RouteTileMap" type="TileMap" parent="Terrain/Level4"]
