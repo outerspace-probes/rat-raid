@@ -165,7 +165,6 @@ tracks/0/keys = {
 [node name="GameWorld" type="Node"]
 
 [node name="MainCamera2D" type="Camera2D" parent="."]
-editor/display_folded = true
 position = Vector2( 990, -300 )
 current = true
 smoothing_speed = 1.0
@@ -268,7 +267,6 @@ text = "0"
 align = 2
 
 [node name="EnemyStartMoveTriggers2" type="Node2D" parent="MainCamera2D"]
-editor/display_folded = true
 visible = false
 
 [node name="LandEnemyTrigger" type="Area2D" parent="MainCamera2D/EnemyStartMoveTriggers2"]
