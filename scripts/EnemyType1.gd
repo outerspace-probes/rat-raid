@@ -24,6 +24,9 @@ func _ready():
 		direction = "right"
 		Sprite.flip_h = true
 		
+	if disableMoving || moveSpeed == 0:
+		$AnimationPlayer.stop()
+		
 func _process(delta):
 	
 	if !isWaiting && !disableMoving:
