@@ -18,7 +18,7 @@ var playerSpawnPos = Vector2(990,0)
 var initSpawnPos = playerSpawnPos
 
 onready var main_scene = preload("res://MainScene.tscn")
-onready var PlayerRat = $'/root/GameWorld/PlayerRat'
+#onready var PlayerRat = $'/root/GameWorld/PlayerRat'
 
 signal score_changed
 signal lifes_changed
@@ -111,9 +111,10 @@ func getLifesNum():
 func decreasePlayerHealth(delta):
 	
 	if playerHealth > -1:
-		var playerSpeedFactor = PlayerRat.speedCurrent / 400
-		var decreaseAmt = healthDecreaseSpeed * delta / 10
-		playerHealth -= decreaseAmt + decreaseAmt * playerSpeedFactor
+#		var playerSpeedFactor = PlayerRat.speedCurrent / 400
+#		var decreaseAmt = healthDecreaseSpeed * delta / 10
+#		playerHealth -= decreaseAmt + decreaseAmt * playerSpeedFactor
+		playerHealth -= healthDecreaseSpeed * delta / 10
 	
 func getPlayerHealth():
 	

@@ -222,6 +222,7 @@ tracks/1/keys = {
 [node name="GameWorld" type="Node"]
 
 [node name="MainCamera2D" type="Camera2D" parent="."]
+editor/display_folded = true
 position = Vector2( 990, -300 )
 current = true
 smoothing_speed = 1.0
@@ -351,6 +352,7 @@ script = ExtResource( 11 )
 anims/Flash = SubResource( 9 )
 
 [node name="Terrain" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Terrain"]
 
@@ -445,6 +447,7 @@ cell_size = Vector2( 32, 32 )
 format = 1
 
 [node name="Fuel" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Fuel"]
 editor/display_folded = true
@@ -643,6 +646,7 @@ scale = Vector2( 1.4, 1.5 )
 rewardPoints = 80
 
 [node name="Enemies" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Enemies"]
 
@@ -1170,6 +1174,7 @@ rewardPoints = 100
 moveSpeed = 850
 
 [node name="CheckpointGates" type="Node" parent="."]
+editor/display_folded = true
 script = ExtResource( 19 )
 
 [node name="Checkpoint1" parent="CheckpointGates" instance=ExtResource( 20 )]

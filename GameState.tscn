@@ -4,5 +4,5 @@
 
 [node name="GameState" type="Node2D"]
 script = ExtResource( 1 )
-healthDecreaseSpeed = 19
+healthDecreaseSpeed = 45
 playerLifes = 4
