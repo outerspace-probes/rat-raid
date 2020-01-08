@@ -165,7 +165,6 @@ tracks/0/keys = {
 [node name="GameWorld" type="Node"]
 
 [node name="MainCamera2D" type="Camera2D" parent="."]
-editor/display_folded = true
 position = Vector2( 990, -300 )
 current = true
 smoothing_speed = 1.0
@@ -176,7 +175,6 @@ drag_margin_bottom = 0.0
 script = ExtResource( 1 )
 
 [node name="UIbox" type="Node2D" parent="MainCamera2D"]
-editor/display_folded = true
 position = Vector2( 0, 430 )
 z_index = 4096
 
@@ -186,7 +184,6 @@ color = Color( 0.12549, 0.12549, 0.12549, 1 )
 polygon = PoolVector2Array( -999.24, 130.26, 1176.76, 130.26, 1176.76, -43.74, -999.24, -43.74 )
 
 [node name="HealthProgressBar" type="Node2D" parent="MainCamera2D/UIbox"]
-editor/display_folded = true
 position = Vector2( 100, 17.45 )
 
 [node name="HealthTextureProgress" type="TextureProgress" parent="MainCamera2D/UIbox/HealthProgressBar"]
@@ -287,6 +284,7 @@ shape = SubResource( 8 )
 
 [node name="FlashFXPolygon2D" type="Polygon2D" parent="MainCamera2D"]
 editor/display_folded = true
+visible = false
 scale = Vector2( 1.1885, 1.1885 )
 z_index = 999
 color = Color( 1, 1, 1, 0 )
@@ -391,7 +389,6 @@ cell_size = Vector2( 32, 32 )
 format = 1
 
 [node name="Fuel" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Fuel"]
 editor/display_folded = true
@@ -590,10 +587,8 @@ scale = Vector2( 1.4, 1.5 )
 rewardPoints = 80
 
 [node name="Enemies" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Enemies"]
-editor/display_folded = true
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level1"]
 
@@ -643,7 +638,6 @@ rewardPoints = 60
 moveSpeed = 450
 
 [node name="LandType2" type="Node2D" parent="Enemies/Level1"]
-editor/display_folded = true
 
 [node name="EnemyLandTwo" parent="Enemies/Level1/LandType2" instance=ExtResource( 17 )]
 position = Vector2( 1096.82, -915.461 )
@@ -1120,11 +1114,10 @@ rewardPoints = 100
 moveSpeed = 850
 
 [node name="CheckpointGates" type="Node" parent="."]
-editor/display_folded = true
 script = ExtResource( 19 )
 
 [node name="Checkpoint1" parent="CheckpointGates" instance=ExtResource( 20 )]
-position = Vector2( 994.411, -8473.22 )
+position = Vector2( 996.803, -8473.22 )
 rewardPoints = 500
 
 [node name="Checkpoint2" parent="CheckpointGates" instance=ExtResource( 20 )]
@@ -1144,7 +1137,6 @@ position = Vector2( 990.691, -51437.2 )
 rewardPoints = 500
 
 [node name="PlayerRat" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 990, 0 )
 scale = Vector2( 2, 2 )
 z_index = 99
@@ -1152,8 +1144,9 @@ script = ExtResource( 21 )
 speedDefault = 600
 speedMin = 350
 speedMax = 900
+accelerationBrake = 2000
 speedLeftRight = 850
-refuelSpeed = 100
+refuelSpeed = 40
 
 [node name="Sprite" type="Sprite" parent="PlayerRat"]
 texture = ExtResource( 22 )
@@ -1167,8 +1160,8 @@ anims/RatRunRight = SubResource( 12 )
 anims/RatRunStraight = SubResource( 13 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerRat"]
-position = Vector2( -866.021, -1006.89 )
-polygon = PoolVector2Array( 856.487, 1038.02, 849.436, 1022.6, 850.628, 1011.08, 856.128, 989.621, 847.033, 978.635, 864.242, 953.292, 870.666, 953.584, 886.229, 979.792, 875.845, 989.621, 883.199, 1010.68, 883.199, 1027.36, 876.844, 1035.31, 866.119, 1043.65 )
+position = Vector2( -867.217, -1006.89 )
+polygon = PoolVector2Array( 848.272, 1022.02, 849.623, 1016.61, 850.628, 1011.08, 856.128, 989.621, 847.033, 978.635, 864.242, 953.292, 870.666, 953.584, 886.229, 979.792, 875.845, 989.621, 883.199, 1010.68, 886.098, 1016.34, 886.638, 1023.1, 867.725, 1016.34 )
 
 [node name="LaserAudioStreamPlayer" type="AudioStreamPlayer" parent="PlayerRat"]
 stream = ExtResource( 23 )
