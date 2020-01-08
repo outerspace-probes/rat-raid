@@ -352,7 +352,6 @@ script = ExtResource( 11 )
 anims/Flash = SubResource( 9 )
 
 [node name="Terrain" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Terrain"]
 
@@ -1198,6 +1197,7 @@ position = Vector2( 990.691, -51437.2 )
 rewardPoints = 500
 
 [node name="PlayerRat" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 990, 0 )
 scale = Vector2( 2, 2 )
 z_index = 99
