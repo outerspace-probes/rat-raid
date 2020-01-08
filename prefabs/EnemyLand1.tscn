@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/EnemyType1.gd" type="Script" id=1]
 [ext_resource path="res://images/SlimakRuch.png" type="Texture" id=2]
+[ext_resource path="res://sounds/ENEMIES/SNAIL_V1.wav" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "EnemyMove"
@@ -35,5 +36,10 @@ polygon = PoolVector2Array( -41.7927, -14.2053, -37.2633, -24.2348, -21.0867, -2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "EnemyMove"
 anims/EnemyMove = SubResource( 1 )
+
+[node name="EnemyDieAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 6.0
+bus = "Die"
 [connection signal="area_entered" from="." to="." method="_on_EnemyOne_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_EnemyOne_body_entered"]

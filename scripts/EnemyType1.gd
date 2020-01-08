@@ -13,7 +13,7 @@ const exploPrefab = preload("res://prefabs/Explosion.tscn")
 
 onready var Sprite = get_node("Sprite")
 onready var GameWorld = get_node("/root/GameWorld")
-onready var AudioExplo = $"/root/GameWorld/GlobalAudio/ExploAudioStreamPlayer"
+onready var AudioExplo = $EnemyDieAudioStreamPlayer
 #onready var viewportWidth = get_viewport().get_size().x
 onready var viewportWidth = 1980
 
@@ -73,14 +73,21 @@ func move(delta):
 				
 func processDie():
 	
-	AudioExplo.play()
+	
 	GameState.addScorePoints(rewardPoints)
 	var explo = exploPrefab.instance()
 	explo.set_position(get_global_transform().get_origin())
 	GameWorld.add_child(explo)
-	queue_free()
-
-
+	
+	AudioExplo.play()
+	$Sprite.hide()
+	$CollisionPolygon2D.queue_free()
+	
+	var timer = Timer.new()
+	timer.connect("timeout", self, "queue_free")
+	timer.set_wait_time(2)
+	timer.start()
+	
 func _on_VisibilityNotifier2D_viewport_exited(_viewport):
 	
 	if isFlyingEnemy:

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/EnemyType1.gd" type="Script" id=1]
 [ext_resource path="res://images/GolabRuch.png" type="Texture" id=2]
+[ext_resource path="res://sounds/ENEMIES/PIGEON_V4.wav" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "EnemyMove"
@@ -39,6 +40,11 @@ anims/EnemyMove = SubResource( 1 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 scale = Vector2( 4.91644, 4.91644 )
+
+[node name="EnemyDieAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 6.0
+bus = "Die"
 [connection signal="area_entered" from="." to="." method="_on_EnemyOne_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_EnemyOne_body_entered"]
 [connection signal="viewport_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_viewport_exited"]

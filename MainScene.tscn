@@ -1178,7 +1178,6 @@ bus = "Die"
 [node name="PlayerLaserMissles" type="Node2D" parent="."]
 
 [node name="GlobalAudio" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="MainLoopAudioStreamPlayer" type="AudioStreamPlayer" parent="GlobalAudio"]
 stream = ExtResource( 26 )
