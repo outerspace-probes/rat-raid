@@ -51,7 +51,7 @@ func getPlayerSpawnPos():
 
 func processPlayerDie():
 	
-	if lifesLeft > 0:
+	if lifesLeft > 1:
 		lifesLeft -= 1
 		emit_signal("lifes_changed")
 		restartFromCheckpoint()
