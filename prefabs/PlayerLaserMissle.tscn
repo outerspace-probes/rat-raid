@@ -10,7 +10,7 @@ missleSpeed = 2600
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -870.812, -1210.21 )
 scale = Vector2( 0.999998, 1.3351 )
-polygon = PoolVector2Array( 866.909, 927.09, 866.132, 917.628, 860.386, 893.722, 867.851, 893.804, 874.55, 893.804, 881.996, 893.54, 876.99, 917.864, 875.074, 927.09 )
+polygon = PoolVector2Array( 867.234, 947.359, 866.132, 917.628, 860.386, 893.722, 867.851, 893.804, 874.55, 893.804, 881.996, 893.54, 876.99, 917.864, 874.494, 947.547 )
 
 [node name="Sprite1" type="Sprite" parent="."]
 position = Vector2( -3.06952, 0 )
