@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://scripts/MainCamera2D.gd" type="Script" id=1]
 [ext_resource path="res://images/ui/healthbar/bg.png" type="Texture" id=2]
@@ -25,8 +25,14 @@
 [ext_resource path="res://sounds/LASER_SHOT_V1.wav" type="AudioStream" id=23]
 [ext_resource path="res://sounds/FUELING_V2.wav" type="AudioStream" id=24]
 [ext_resource path="res://sounds/RAT DIES v5.wav" type="AudioStream" id=25]
-[ext_resource path="res://sounds/MAIN_AMBIENT_LOOP_V3.wav" type="AudioStream" id=26]
-[ext_resource path="res://sounds/EXPLOSION_V2.wav" type="AudioStream" id=27]
+[ext_resource path="res://sounds/FOOTSTEPS/FS_SINGLE_01.wav" type="AudioStream" id=26]
+[ext_resource path="res://sounds/FOOTSTEPS/FS_SINGLE_02.wav" type="AudioStream" id=27]
+[ext_resource path="res://sounds/FOOTSTEPS/FS_SINGLE_03.wav" type="AudioStream" id=28]
+[ext_resource path="res://sounds/FOOTSTEPS/FS_SINGLE_04.wav" type="AudioStream" id=29]
+[ext_resource path="res://sounds/FOOTSTEPS/FS_SINGLE_05.wav" type="AudioStream" id=30]
+[ext_resource path="res://sounds/FOOTSTEPS/FS_SINGLE_06.wav" type="AudioStream" id=31]
+[ext_resource path="res://sounds/MAIN_AMBIENT_LOOP_V3.wav" type="AudioStream" id=32]
+[ext_resource path="res://sounds/EXPLOSION_V2.wav" type="AudioStream" id=33]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/Kenney Pixel Square.ttf"
@@ -129,6 +135,23 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 2, 3 ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "playStepSound"
+}, {
+"args": [  ],
+"method": "playStepSound"
+} ]
+}
 
 [sub_resource type="Animation" id=12]
 length = 0.2
@@ -145,6 +168,23 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 4, 5 ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "playStepSound"
+}, {
+"args": [  ],
+"method": "playStepSound"
+} ]
+}
 
 [sub_resource type="Animation" id=13]
 length = 0.2
@@ -160,6 +200,23 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 0, 1 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "playStepSound"
+}, {
+"args": [  ],
+"method": "playStepSound"
+} ]
 }
 
 [node name="GameWorld" type="Node"]
@@ -1175,18 +1232,50 @@ stream = ExtResource( 25 )
 volume_db = 0.803
 bus = "Die"
 
+[node name="StepSounds" type="Node" parent="PlayerRat"]
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="PlayerRat/StepSounds"]
+stream = ExtResource( 26 )
+volume_db = 7.0
+bus = "Steps"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="PlayerRat/StepSounds"]
+stream = ExtResource( 27 )
+volume_db = 7.0
+bus = "Steps"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="PlayerRat/StepSounds"]
+stream = ExtResource( 28 )
+volume_db = 7.0
+bus = "Steps"
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="PlayerRat/StepSounds"]
+stream = ExtResource( 29 )
+volume_db = 7.0
+bus = "Steps"
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="PlayerRat/StepSounds"]
+stream = ExtResource( 30 )
+volume_db = 7.0
+bus = "Steps"
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="PlayerRat/StepSounds"]
+stream = ExtResource( 31 )
+volume_db = 7.0
+bus = "Steps"
+
 [node name="PlayerLaserMissles" type="Node2D" parent="."]
 
 [node name="GlobalAudio" type="Node" parent="."]
 
 [node name="MainLoopAudioStreamPlayer" type="AudioStreamPlayer" parent="GlobalAudio"]
-stream = ExtResource( 26 )
+stream = ExtResource( 32 )
 volume_db = -11.107
 autoplay = true
 bus = "Ambient"
 
 [node name="ExploAudioStreamPlayer" type="AudioStreamPlayer" parent="GlobalAudio"]
-stream = ExtResource( 27 )
+stream = ExtResource( 33 )
 volume_db = 10.151
 bus = "Explo"
 [connection signal="area_entered" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_area_entered"]

@@ -25,6 +25,8 @@ onready var AudioLaser = $LaserAudioStreamPlayer
 onready var AudioFueling = $FuelingAudioStreamPlayer
 onready var AudioDie = $DieAudioStreamPlayer
 onready var Collider = $CollisionPolygon2D
+onready var StepSounds = $StepSounds.get_children()
+onready var stepSoundCount = $StepSounds.get_child_count()
 
 func _ready():
 	
@@ -38,6 +40,8 @@ func _ready():
 	AnimPlayer.stop()
 	GameState.PlayerRat = self
 	var _conn = GameState.connect("fuel_empty",self,"_on_GameState_fuel_empty")
+	
+	
 		
 func _process(delta):
 	
@@ -115,7 +119,7 @@ func move(delta):
 
 func setAnimSpeedScale():
 	
-	AnimPlayer.set_speed_scale(speedCurrent / speedDefault)
+	AnimPlayer.set_speed_scale((speedCurrent / speedDefault) * 0.9)
 		
 func createLaser(pos):
 	
@@ -124,6 +128,11 @@ func createLaser(pos):
 	laser.set_position(spawnPos)
 	get_tree().get_root().find_node("PlayerLaserMissles",true,false).add_child(laser)
 	AudioLaser.play()
+	
+func playStepSound():
+	
+	var randStepNum = int(rand_range(1,stepSoundCount))
+	StepSounds[randStepNum - 1].play()
 
 # collisions
 
