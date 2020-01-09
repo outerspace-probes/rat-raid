@@ -448,7 +448,7 @@ format = 1
 
 [node name="Level6" type="Node2D" parent="Terrain"]
 editor/display_folded = true
-position = Vector2( 0, -32243.8 )
+position = Vector2( 0, -43042.7 )
 
 [node name="RouteTileMap" type="TileMap" parent="Terrain/Level6"]
 tile_set = ExtResource( 12 )

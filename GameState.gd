@@ -4,7 +4,7 @@ extends Node
 
 export var healthDecreaseSpeed = 50
 export var playerLifes = 3
-export var checkpointReached = 0
+export var checkpointReached = 4
 
 var playerHealth = 100
 var scorePoints = 0
