@@ -447,6 +447,7 @@ cell_size = Vector2( 32, 32 )
 format = 1
 
 [node name="Level6" type="Node2D" parent="Terrain"]
+editor/display_folded = true
 position = Vector2( 0, -32243.8 )
 
 [node name="RouteTileMap" type="TileMap" parent="Terrain/Level6"]
@@ -1068,7 +1069,6 @@ rewardPoints = 100
 moveSpeed = 850
 
 [node name="Level5" type="Node2D" parent="Enemies"]
-editor/display_folded = true
 position = Vector2( 0, -32243.8 )
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level5"]
@@ -1250,16 +1250,15 @@ position = Vector2( 990.691, -51437.2 )
 rewardPoints = 500
 
 [node name="PlayerRat" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 990, 0 )
 scale = Vector2( 2, 2 )
 z_index = 99
 script = ExtResource( 21 )
-speedDefault = 600
-speedMin = 350
-speedMax = 900
+speedDefault = 450
+speedMin = 200
+speedMax = 800
 accelerationBrake = 2000
-speedLeftRight = 850
+speedLeftRight = 450
 refuelSpeed = 40
 
 [node name="Sprite" type="Sprite" parent="PlayerRat"]
@@ -1283,7 +1282,7 @@ volume_db = -13.157
 
 [node name="FuelingAudioStreamPlayer" type="AudioStreamPlayer" parent="PlayerRat"]
 stream = ExtResource( 24 )
-volume_db = -7.751
+volume_db = -11.218
 
 [node name="DieAudioStreamPlayer" type="AudioStreamPlayer" parent="PlayerRat"]
 stream = ExtResource( 25 )
@@ -1325,7 +1324,6 @@ bus = "Steps"
 [node name="PlayerLaserMissles" type="Node2D" parent="."]
 
 [node name="GlobalAudio" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="MainLoopAudioStreamPlayer" type="AudioStreamPlayer" parent="GlobalAudio"]
 stream = ExtResource( 32 )
