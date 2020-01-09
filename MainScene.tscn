@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://scripts/MainCamera2D.gd" type="Script" id=1]
 [ext_resource path="res://images/ui/healthbar/bg.png" type="Texture" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://sounds/FOOTSTEPS/FS_SINGLE_06.wav" type="AudioStream" id=31]
 [ext_resource path="res://sounds/MAIN_AMBIENT_LOOP_V3.wav" type="AudioStream" id=32]
 [ext_resource path="res://sounds/EXPLOSION_V2.wav" type="AudioStream" id=33]
+[ext_resource path="res://LowFuelAudioStreamPlayer.tscn" type="PackedScene" id=34]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/Kenney Pixel Square.ttf"
@@ -352,6 +353,7 @@ script = ExtResource( 11 )
 anims/Flash = SubResource( 9 )
 
 [node name="Terrain" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Terrain"]
 editor/display_folded = true
@@ -466,6 +468,7 @@ cell_size = Vector2( 32, 32 )
 format = 1
 
 [node name="Fuel" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Fuel"]
 editor/display_folded = true
@@ -674,6 +677,7 @@ scale = Vector2( 1.4, 1.5 )
 rewardPoints = 80
 
 [node name="Enemies" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Level1" type="Node2D" parent="Enemies"]
 editor/display_folded = true
@@ -1250,6 +1254,7 @@ position = Vector2( 990.691, -51437.2 )
 rewardPoints = 500
 
 [node name="PlayerRat" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 990, 0 )
 scale = Vector2( 2, 2 )
 z_index = 99
@@ -1335,6 +1340,8 @@ bus = "Ambient"
 stream = ExtResource( 33 )
 volume_db = 10.151
 bus = "Explo"
+
+[node name="LowFuelAudioStreamPlayer" parent="GlobalAudio" instance=ExtResource( 34 )]
 [connection signal="area_entered" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_area_entered"]
 [connection signal="area_exited" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_area_exited"]
 [connection signal="body_entered" from="PlayerRat" to="PlayerRat" method="_on_PlayerRat_body_entered"]

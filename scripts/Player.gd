@@ -38,11 +38,9 @@ func _ready():
 	bridgeNode = get_tree().get_root().find_node("RouteBridgesTileMap", true, false)
 	routeNode = get_tree().get_root().find_node("RouteTileMap", true, false)
 	AnimPlayer.stop()
-	#GameState.PlayerRat = self
+	GameState.stopLowFuelAudio()
 	var _conn = GameState.connect("fuel_empty",self,"_on_GameState_fuel_empty")
 	
-	
-		
 func _process(delta):
 	
 	if isRunStarted:

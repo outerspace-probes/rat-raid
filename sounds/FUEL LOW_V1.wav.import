@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/FUEL LOW_V1.wav-f5c7523ef398bcd8aa9dfaf87ac8cdf8.sample"
+
+[deps]
+
+source_file="res://sounds/FUEL LOW_V1.wav"
+dest_files=[ "res://.import/FUEL LOW_V1.wav-f5c7523ef398bcd8aa9dfaf87ac8cdf8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

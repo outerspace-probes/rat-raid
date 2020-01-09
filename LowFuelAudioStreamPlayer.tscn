@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sounds/FUEL LOW_V1.wav" type="AudioStream" id=1]
+
+[node name="LowFuelAudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )
+bus = "Fuel"

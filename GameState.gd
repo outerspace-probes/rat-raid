@@ -4,7 +4,7 @@ extends Node
 
 export var healthDecreaseSpeed = 50
 export var playerLifes = 3
-export var checkpointReached = 4
+export var checkpointReached = 0
 
 var playerHealth = 100
 var scorePoints = 0
@@ -12,13 +12,14 @@ var allowNextShoot = true
 var lifesLeft
 var isActiveRun = false
 var isGameOver = false
+var isLowFuel = false
 var playerSpawnPos = Vector2(990,0)
 
 # initial state backup
 var initSpawnPos = playerSpawnPos
 
 onready var main_scene = preload("res://MainScene.tscn")
-#onready var PlayerRat = $'/root/GameWorld/PlayerRat'
+onready var LowFuelAudio = $LowFuelAudioStreamPlayer
 
 signal score_changed
 signal lifes_changed
@@ -37,6 +38,16 @@ func _process(delta):
 		decreasePlayerHealth(delta)
 		if playerHealth < 0:
 			emit_signal("fuel_empty")
+		
+		if playerHealth > 30:
+			isLowFuel = false
+		else:
+			isLowFuel = true
+	
+	if isLowFuel && !LowFuelAudio.playing:
+		LowFuelAudio.play()
+	elif !isLowFuel:
+		LowFuelAudio.stop()
 
 func _input(event):
 	
@@ -50,6 +61,8 @@ func getPlayerSpawnPos():
 	return playerSpawnPos
 
 func processPlayerDie():
+	
+	LowFuelAudio.stop()
 	
 	if lifesLeft > 1:
 		lifesLeft -= 1
@@ -69,10 +82,12 @@ func restartGame():
 	checkpointReached = 0
 	lifesLeft = playerLifes
 	playerSpawnPos = initSpawnPos
+	isLowFuel = false
 	reloadMainScene()
 
 func reloadMainScene():
 	
+	LowFuelAudio.stop()
 	call_deferred("deferredReload")
 	
 func deferredReload():
@@ -82,6 +97,8 @@ func deferredReload():
 	# get_tree().get_root().find_node("PlayerLaserMissles",true,false).free()
 	get_tree().get_root().find_node("GameWorld",true,false).queue_free()
 	var _rel = get_tree().change_scene_to(main_scene)
+	LowFuelAudio.stop()
+	isLowFuel = false
 	
 func checkpointHit(checkpointObj):
 
@@ -119,3 +136,7 @@ func decreasePlayerHealth(delta):
 func getPlayerHealth():
 	
 	return playerHealth
+	
+func stopLowFuelAudio():
+	
+	LowFuelAudio.stop()
