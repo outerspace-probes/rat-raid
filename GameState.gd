@@ -80,9 +80,10 @@ func restartFromCheckpoint():
 		
 	reloadMainScene()
 
-func restartGame():
+func restartGame(var savePoints = false):
 	# reinit state
-	scorePoints = 0
+	if !savePoints:
+		scorePoints = 0
 	checkpointReached = 0
 	lifesLeft = playerLifes
 	playerSpawnPos = initSpawnPos
@@ -98,7 +99,6 @@ func deferredReload():
 	
 	isActiveRun = false
 	playerHealth = 100
-	# get_tree().get_root().find_node("PlayerLaserMissles",true,false).free()
 	get_tree().get_root().find_node("GameWorld",true,false).queue_free()
 	var _rel = get_tree().change_scene_to(main_scene)
 	LowFuelAudio.stop()
@@ -132,9 +132,6 @@ func getLifesNum():
 func decreasePlayerHealth(delta):
 	
 	if playerHealth > -1:
-#		var playerSpeedFactor = PlayerRat.speedCurrent / 400
-#		var decreaseAmt = healthDecreaseSpeed * delta / 10
-#		playerHealth -= decreaseAmt + decreaseAmt * playerSpeedFactor
 		playerHealth -= healthDecreaseSpeed * delta / 10
 	
 func getPlayerHealth():
