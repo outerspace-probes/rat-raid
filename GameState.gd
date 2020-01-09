@@ -55,7 +55,11 @@ func _input(event):
 		if event.is_action_pressed("FIRE") || event.is_action_pressed("MOVE_LEFT") || event.is_action_pressed("MOVE_RIGHT") || event.is_action_pressed("ACCELERATE") || event.is_action_pressed("BREAK"):
 			isGameOver = false
 			restartGame()
-
+			
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_F12:
+			restartGame()
+			
 func getPlayerSpawnPos():
 	
 	return playerSpawnPos
