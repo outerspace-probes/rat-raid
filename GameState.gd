@@ -36,7 +36,8 @@ func _ready():
 func _process(delta):
 	
 	if isActiveRun:
-		decreasePlayerHealth(delta)
+		if !godMode:
+			decreasePlayerHealth(delta)
 		if playerHealth < 0:
 			emit_signal("fuel_empty")
 		
@@ -94,6 +95,7 @@ func restartGame(var savePoints = false):
 	lifesLeft = playerLifes
 	playerSpawnPos = initSpawnPos
 	isLowFuel = false
+	godMode = false
 	reloadMainScene()
 
 func reloadMainScene():
