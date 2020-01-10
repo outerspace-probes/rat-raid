@@ -703,6 +703,7 @@ rewardPoints = 80
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Level1" type="Node2D" parent="Enemies"]
+editor/display_folded = true
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level1"]
 editor/display_folded = true
@@ -753,6 +754,7 @@ rewardPoints = 60
 moveSpeed = 450
 
 [node name="LandType2" type="Node2D" parent="Enemies/Level1"]
+editor/display_folded = true
 
 [node name="EnemyLandTwo" parent="Enemies/Level1/LandType2" instance=ExtResource( 17 )]
 position = Vector2( 1096.82, -915.461 )
@@ -788,8 +790,10 @@ moveSpeed = 450
 [node name="Flying" type="Node2D" parent="Enemies/Level1"]
 
 [node name="Level2" type="Node2D" parent="Enemies"]
+editor/display_folded = true
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level2"]
+editor/display_folded = true
 
 [node name="EnemyLandOne" parent="Enemies/Level2/LandType1" instance=ExtResource( 16 )]
 position = Vector2( 1293.6, -9727.68 )
@@ -893,10 +897,10 @@ moveSpeed = 450
 [node name="Flying" type="Node2D" parent="Enemies/Level2"]
 
 [node name="Level3" type="Node2D" parent="Enemies"]
-editor/display_folded = true
 position = Vector2( 0, -10761.6 )
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level3"]
+editor/display_folded = true
 
 [node name="EnemyLandOne" parent="Enemies/Level3/LandType1" instance=ExtResource( 16 )]
 position = Vector2( 1271.55, -10000.6 )
@@ -937,6 +941,7 @@ moveSpeed = 450
 startFromLeft = true
 
 [node name="LandType2" type="Node2D" parent="Enemies/Level3"]
+editor/display_folded = true
 
 [node name="EnemyLandTwo" parent="Enemies/Level3/LandType2" instance=ExtResource( 17 )]
 position = Vector2( 1246.33, -9169.96 )
@@ -993,27 +998,29 @@ rewardPoints = 30
 moveSpeed = 450
 
 [node name="Flying" type="Node2D" parent="Enemies/Level3"]
+editor/display_folded = true
 
 [node name="EnemyFlyingOne" parent="Enemies/Level3/Flying" instance=ExtResource( 18 )]
 position = Vector2( 1946.37, -12720.8 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 
 [node name="EnemyFlyingOne2" parent="Enemies/Level3/Flying" instance=ExtResource( 18 )]
 position = Vector2( 112.393, -13117.3 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 startFromLeft = true
 
 [node name="EnemyFlyingOne3" parent="Enemies/Level3/Flying" instance=ExtResource( 18 )]
 position = Vector2( 1948.98, -14033.8 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 
 [node name="Level4" type="Node2D" parent="Enemies"]
 position = Vector2( 0, -21495.2 )
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level4"]
+editor/display_folded = true
 
 [node name="EnemyLandOne" parent="Enemies/Level4/LandType1" instance=ExtResource( 16 )]
 position = Vector2( 1208.04, -10486 )
@@ -1027,6 +1034,7 @@ moveSpeed = 450
 startFromLeft = true
 
 [node name="LandType2" type="Node2D" parent="Enemies/Level4"]
+editor/display_folded = true
 
 [node name="EnemyLandTwo" parent="Enemies/Level4/LandType2" instance=ExtResource( 17 )]
 position = Vector2( 1213.45, -9968.71 )
@@ -1069,34 +1077,33 @@ rewardPoints = 30
 moveSpeed = 450
 
 [node name="Flying" type="Node2D" parent="Enemies/Level4"]
-editor/display_folded = true
 
 [node name="EnemyFlyingOne" parent="Enemies/Level4/Flying" instance=ExtResource( 18 )]
 position = Vector2( 1939.31, -11188.2 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 
 [node name="EnemyFlyingOne2" parent="Enemies/Level4/Flying" instance=ExtResource( 18 )]
 position = Vector2( 1928.14, -13374.7 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 
 [node name="EnemyFlyingOne3" parent="Enemies/Level4/Flying" instance=ExtResource( 18 )]
 position = Vector2( 95.8002, -14823.9 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 startFromLeft = true
 
 [node name="EnemyFlyingOne4" parent="Enemies/Level4/Flying" instance=ExtResource( 18 )]
 position = Vector2( 1902.52, -16646 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 
 [node name="Level5" type="Node2D" parent="Enemies"]
-editor/display_folded = true
 position = Vector2( 0, -32243.8 )
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level5"]
+editor/display_folded = true
 
 [node name="EnemyLandOne" parent="Enemies/Level5/LandType1" instance=ExtResource( 16 )]
 position = Vector2( 932.971, -9387.57 )
@@ -1181,6 +1188,7 @@ rewardPoints = 60
 moveSpeed = 450
 
 [node name="LandType2" type="Node2D" parent="Enemies/Level5"]
+editor/display_folded = true
 
 [node name="EnemyLandTwo" parent="Enemies/Level5/LandType2" instance=ExtResource( 17 )]
 position = Vector2( 858.781, -9092.37 )
@@ -1212,23 +1220,24 @@ moveSpeed = 450
 [node name="EnemyFlyingOne" parent="Enemies/Level5/Flying" instance=ExtResource( 18 )]
 position = Vector2( 1713.38, -10294.3 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 
 [node name="EnemyFlyingOne2" parent="Enemies/Level5/Flying" instance=ExtResource( 18 )]
 position = Vector2( 413.35, -11900.1 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 startFromLeft = true
 
 [node name="EnemyFlyingOne3" parent="Enemies/Level5/Flying" instance=ExtResource( 18 )]
 position = Vector2( 1932.82, -13636.3 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 
 [node name="Level6" type="Node2D" parent="Enemies"]
 position = Vector2( 0, -32243.8 )
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level6"]
+editor/display_folded = true
 
 [node name="EnemyLandOne" parent="Enemies/Level6/LandType1" instance=ExtResource( 16 )]
 position = Vector2( 1166.91, -19559.9 )
@@ -1252,6 +1261,7 @@ rewardPoints = 60
 moveSpeed = 450
 
 [node name="LandType2" type="Node2D" parent="Enemies/Level6"]
+editor/display_folded = true
 
 [node name="EnemyLandTwo" parent="Enemies/Level6/LandType2" instance=ExtResource( 17 )]
 position = Vector2( 902.953, -21044.7 )
@@ -1277,52 +1287,52 @@ startFromLeft = true
 [node name="EnemyFlyingOne" parent="Enemies/Level6/Flying" instance=ExtResource( 18 )]
 position = Vector2( 1709.27, -20476.6 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 startFromLeft = true
 
 [node name="EnemyFlyingOne5" parent="Enemies/Level6/Flying" instance=ExtResource( 18 )]
 position = Vector2( 107.875, -20749.8 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 startFromLeft = true
 
 [node name="EnemyFlyingOne7" parent="Enemies/Level6/Flying" instance=ExtResource( 18 )]
 position = Vector2( 1088.72, -22328.9 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 startFromLeft = true
 
 [node name="EnemyFlyingOne8" parent="Enemies/Level6/Flying" instance=ExtResource( 18 )]
 position = Vector2( 1074, -22132.8 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 
 [node name="EnemyFlyingOne9" parent="Enemies/Level6/Flying" instance=ExtResource( 18 )]
 position = Vector2( 338.373, -22946.9 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 
 [node name="EnemyFlyingOne6" parent="Enemies/Level6/Flying" instance=ExtResource( 18 )]
 position = Vector2( 874.42, -20457.6 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 startFromLeft = true
 
 [node name="EnemyFlyingOne2" parent="Enemies/Level6/Flying" instance=ExtResource( 18 )]
 position = Vector2( 107.875, -20233.7 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 
 [node name="EnemyFlyingOne3" parent="Enemies/Level6/Flying" instance=ExtResource( 18 )]
 position = Vector2( 1504.35, -19691 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 startFromLeft = true
 
 [node name="EnemyFlyingOne4" parent="Enemies/Level6/Flying" instance=ExtResource( 18 )]
 position = Vector2( 551.864, -19467.1 )
 rewardPoints = 100
-moveSpeed = 850
+moveSpeed = 950
 
 [node name="CheckpointGates" type="Node" parent="."]
 editor/display_folded = true
