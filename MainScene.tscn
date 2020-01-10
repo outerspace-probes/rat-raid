@@ -223,7 +223,6 @@ tracks/1/keys = {
 [node name="GameWorld" type="Node"]
 
 [node name="MainCamera2D" type="Camera2D" parent="."]
-editor/display_folded = true
 position = Vector2( 990, -300 )
 current = true
 smoothing_speed = 1.0
@@ -243,6 +242,7 @@ color = Color( 0.12549, 0.12549, 0.12549, 1 )
 polygon = PoolVector2Array( -999.24, 130.26, 1176.76, 130.26, 1176.76, -43.74, -999.24, -43.74 )
 
 [node name="HealthProgressBar" type="Node2D" parent="MainCamera2D/UIbox"]
+editor/display_folded = true
 position = Vector2( 100, 17.45 )
 
 [node name="HealthTextureProgress" type="TextureProgress" parent="MainCamera2D/UIbox/HealthProgressBar"]
@@ -262,6 +262,7 @@ scale = Vector2( 0.141543, 0.141543 )
 texture = ExtResource( 5 )
 
 [node name="LivesCounter" type="Node2D" parent="MainCamera2D/UIbox"]
+editor/display_folded = true
 script = ExtResource( 6 )
 
 [node name="Panel" type="Panel" parent="MainCamera2D/UIbox/LivesCounter"]
@@ -342,7 +343,6 @@ shape = SubResource( 8 )
 
 [node name="FlashFXPolygon2D" type="Polygon2D" parent="MainCamera2D"]
 editor/display_folded = true
-visible = false
 scale = Vector2( 1.1885, 1.1885 )
 z_index = 999
 color = Color( 1, 1, 1, 0 )
@@ -1346,6 +1346,7 @@ position = Vector2( 990.691, -51437.2 )
 rewardPoints = 500
 
 [node name="PlayerRat" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 990, 0 )
 scale = Vector2( 2, 2 )
 z_index = 99
