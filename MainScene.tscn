@@ -326,11 +326,10 @@ text = "0"
 align = 2
 
 [node name="EnemyStartMoveTriggers2" type="Node2D" parent="MainCamera2D"]
-editor/display_folded = true
-visible = false
+position = Vector2( 7.716, 0 )
 
 [node name="LandEnemyTrigger" type="Area2D" parent="MainCamera2D/EnemyStartMoveTriggers2"]
-position = Vector2( 6.08186, -80.1354 )
+position = Vector2( 1.19209e-005, -80.1354 )
 z_index = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCamera2D/EnemyStartMoveTriggers2/LandEnemyTrigger"]
