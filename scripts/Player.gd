@@ -137,10 +137,12 @@ func playStepSound():
 func _on_PlayerRat_area_entered(area):
 		
 	if area.is_in_group("enemies"):
-		processDie()
+		if !GameState.godMode:
+			processDie()
 		
 	if area.is_in_group("checkpoint"):
-		processDie()
+		if !GameState.godMode:
+			processDie()
 		
 	if area.is_in_group("fuel"):
 		isRefueling = true
@@ -156,7 +158,8 @@ func _on_PlayerRat_body_entered(body):
 	
 	if !isOnBridge:		
 		if body.name == "RouteTileMap":
-			processDie()
+			if !GameState.godMode:
+				processDie()
 			
 	if body.name == "RouteBridgesTileMap":
 		isOnBridge = true
@@ -166,11 +169,13 @@ func _on_PlayerRat_body_exited(body):
 	if body.name == "RouteBridgesTileMap":
 		isOnBridge = false
 		if overlaps_body(routeNode):
-			processDie()
+			if !GameState.godMode:
+				processDie()
 
 func _on_GameState_fuel_empty():
 	
-	processDie()
+	if !GameState.godMode:
+		processDie()
 	
 func processDie():
 	

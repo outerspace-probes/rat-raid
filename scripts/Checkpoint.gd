@@ -16,6 +16,11 @@ func _on_Checkpoint_area_entered(area):
 		
 		GameState.checkpointHit(self)
 		GameState.addScorePoints(rewardPoints)
+
+	elif area.name == "PlayerRat":
+		if GameState.godMode:
+			GameState.checkpointHit(self)
+			GameState.addScorePoints(rewardPoints)
 		
 func destroy():
 	
