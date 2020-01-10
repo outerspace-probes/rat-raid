@@ -14,6 +14,7 @@ var isActiveRun = false
 var isGameOver = false
 var isLowFuel = false
 var playerSpawnPos = Vector2(990,0)
+var godMode = false
 
 # initial state backup
 var initSpawnPos = playerSpawnPos
@@ -59,6 +60,11 @@ func _input(event):
 	if event is InputEventKey:
 		if event.pressed and event.scancode == KEY_F12:
 			restartGame()
+	
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_F11:
+			godMode = !godMode
+			print("godmode switch")
 			
 func getPlayerSpawnPos():
 	
@@ -68,7 +74,7 @@ func processPlayerDie():
 	
 	LowFuelAudio.stop()
 	
-	if lifesLeft > 1:
+	if lifesLeft > 0:
 		lifesLeft -= 1
 		emit_signal("lifes_changed")
 		restartFromCheckpoint()
