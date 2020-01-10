@@ -5,7 +5,7 @@
 
 [node name="PlayerLaserMissle" type="Area2D"]
 script = ExtResource( 1 )
-missleSpeed = 2600
+missleSpeed = 2700
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -870.812, -1210.21 )
