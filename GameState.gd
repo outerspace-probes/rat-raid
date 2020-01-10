@@ -3,7 +3,7 @@ extends Node
 # state vars
 
 export var healthDecreaseSpeed = 50
-export var playerLifes = 3
+var playerLifes = 3
 export var checkpointReached = 0
 
 var playerHealth = 100
