@@ -233,6 +233,7 @@ drag_margin_bottom = 0.0
 script = ExtResource( 1 )
 
 [node name="UIbox" type="Node2D" parent="MainCamera2D"]
+editor/display_folded = true
 position = Vector2( 0, 430 )
 z_index = 4096
 
@@ -325,10 +326,11 @@ text = "0"
 align = 2
 
 [node name="EnemyStartMoveTriggers2" type="Node2D" parent="MainCamera2D"]
+editor/display_folded = true
 visible = false
 
 [node name="LandEnemyTrigger" type="Area2D" parent="MainCamera2D/EnemyStartMoveTriggers2"]
-position = Vector2( 19.1927, -216.783 )
+position = Vector2( 6.08186, -80.1354 )
 z_index = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCamera2D/EnemyStartMoveTriggers2/LandEnemyTrigger"]
@@ -416,6 +418,7 @@ format = 1
 tile_data = PoolIntArray( -13041650, 5, 65537, -12845053, 5, 0, -12779517, 5, 0, -12713981, 5, 0, -12451824, 5, 65536, -11862015, 5, 65537, -11796479, 5, 1, -11796478, 5, 0, -11206639, 4, 1, -11141103, 4, 65537, -10420221, 5, 65536, -10026992, 5, 1, -10026991, 5, 0, -9175039, 5, 65537, -9109503, 5, 0, -8257519, 2, 0, -7536639, 5, 65536, -6946800, 5, 1, -6291453, 5, 65537, -6029298, 5, 0 )
 
 [node name="Level4" type="Node2D" parent="Terrain"]
+editor/display_folded = true
 position = Vector2( 0, -21495.2 )
 
 [node name="RouteTileMap" type="TileMap" parent="Terrain/Level4"]
@@ -436,6 +439,7 @@ format = 1
 tile_data = PoolIntArray( -12976124, 5, 65537, -12910589, 5, 0, -12910588, 5, 0, -12648438, 5, 65536, -12124147, 5, 65537, -12058611, 5, 1, -11927545, 2, 0, -11665400, 4, 65537, -10420223, 5, 65537, -10354687, 5, 1, -10354686, 5, 0, -9699309, 5, 65536, -9043959, 4, 1, -8978423, 4, 2, -8978422, 4, 65537, -8454135, 5, 65536, -7995373, 5, 65537, -7929837, 5, 0, -7340017, 5, 65537, -7274481, 5, 1, -6946814, 4, 65538, -6881278, 4, 1, -6422514, 5, 65536, -5963771, 5, 1, -5963770, 5, 0 )
 
 [node name="Level5" type="Node2D" parent="Terrain"]
+editor/display_folded = true
 position = Vector2( 0, -32243.8 )
 
 [node name="RouteTileMap" type="TileMap" parent="Terrain/Level5"]
@@ -1222,7 +1226,6 @@ rewardPoints = 100
 moveSpeed = 850
 
 [node name="Level6" type="Node2D" parent="Enemies"]
-editor/display_folded = true
 position = Vector2( 0, -32243.8 )
 
 [node name="LandType1" type="Node2D" parent="Enemies/Level6"]
@@ -1251,7 +1254,7 @@ moveSpeed = 450
 [node name="LandType2" type="Node2D" parent="Enemies/Level6"]
 
 [node name="EnemyLandTwo" parent="Enemies/Level6/LandType2" instance=ExtResource( 17 )]
-position = Vector2( 995.109, -20290.2 )
+position = Vector2( 902.953, -21044.7 )
 scale = Vector2( 1.3, 1 )
 rewardPoints = 30
 moveSpeed = 450
