@@ -32,7 +32,7 @@ func _ready():
 	
 	lifesLeft = playerLifes
 	allowNextShoot = true
-
+	
 func _process(delta):
 	
 	if isActiveRun:
